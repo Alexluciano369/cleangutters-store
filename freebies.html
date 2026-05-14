@@ -100,7 +100,7 @@ ev.preventDefault();
 var b=this.querySelector('button'),e=document.getElementById('e'),m=document.getElementById('m');
 if(!e.value)return;
 b.disabled=true;b.textContent='Sending...';
-fetch('/api/store/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:'free-5-prompts',email:e.value,source:'freebies-all'})})
+fetch('https://cash-machine.agents.runlobster.com/api/store/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:'free-5-prompts',email:e.value,source:'freebies-all'})})
 .then(function(r){return r.json()})
 .then(function(){m.innerHTML='<span style="color:#22c55e">✔ Check your inbox! All 3 freebies sent.</span>';b.textContent='Sent!'})
 .catch(function(){m.innerHTML='<span style="color:#22c55e">✄ Your content is ready below.</span>';b.textContent='Done'});
