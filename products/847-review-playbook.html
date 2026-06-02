@@ -1,262 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Social Growth System</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 847-Review Playbook — The Trades Guy</title>
 <style>
-  :root {
-    --bg: #1C1B18; --surface: #222120; --fg: #f5f3f0;
-    --fg-muted: rgba(245,243,240,0.7); --accent: #8B7FEA;
-    --green: #4ade80; --border: rgba(245,243,240,0.08);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg); color: var(--fg);
-    font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.6; max-width: 800px;
-    margin: 0 auto; padding: 48px 24px;
-  }
-  h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.03em; }
-  h2 { font-size: 1.3rem; font-weight: 700; margin: 32px 0 12px; color: var(--accent); }
-  h3 { font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px; }
-  p { color: var(--fg-muted); margin-bottom: 12px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; padding: 20px; margin: 16px 0;
-  }
-  .card h3 { margin-top: 0; }
-  ul, ol { color: var(--fg-muted); margin: 0 0 16px 20px; }
-  li { margin-bottom: 6px; }
-  .highlight { background: rgba(139,127,234,0.1); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: var(--fg-muted); }
-  .stat { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; color: var(--fg-muted); font-size: 0.9rem; }
-  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
-  th { color: var(--fg); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
-  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
-  .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 24px 0; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.75;padding:0 0 80px}
+  .container{max-width:740px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(160deg,#161009,#0a0a0a);border-bottom:1px solid #221a0c;padding:48px 22px 40px}
+  header .container{padding:0}
+  h1{font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+  .subtitle{color:#9aa3ad;font-size:1.08rem;max-width:620px}
+  .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .stat{background:#111;border:1px solid #222;border-radius:10px;padding:10px 16px;text-align:center}
+  .stat-num{font-size:1.25rem;font-weight:800;color:#f5a623;display:block}
+  .stat-label{font-size:.72rem;color:#666}
+  h2{font-size:1.5rem;font-weight:800;color:#fff;margin:50px 0 8px;letter-spacing:-.01em}
+  h2 .ch{color:#f5a623;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
+  h3{font-size:1.1rem;font-weight:700;margin:26px 0 10px;color:#f5a623}
+  p{margin-bottom:15px;color:#bcc3cb}
+  ul,ol{margin:10px 0 18px 22px}
+  li{margin-bottom:9px;color:#bcc3cb}
+  li strong{color:#eef1f4}
+  .quote{border-left:3px solid #f5a623;padding:16px 22px;margin:26px 0;background:#100c05;border-radius:0 10px 10px 0;font-style:italic;color:#d8dde2}
+  .box{background:#12100a;border:1px solid #2c2410;border-radius:12px;padding:22px 24px;margin:24px 0}
+  .box h3{margin-top:0}
+  .box.win{background:#0c140d;border-color:#16331a}.box.win h3{color:#34d399}
+  .box.warn{background:#160d0d;border-color:#3a1a1a}.box.warn h3{color:#f87171}
+  .script{background:#0d0d0f;border:1px solid #222;border-radius:10px;padding:16px 18px;margin:14px 0;font-family:'SF Mono',Menlo,monospace;font-size:.88rem;color:#c9d1d9;white-space:pre-wrap;line-height:1.6}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#222,transparent);margin:46px 0}
+  footer{margin-top:56px;padding-top:28px;border-top:1px solid #1e1e22;color:#5b636d;font-size:.85rem;text-align:center}
+  footer a{color:#f5a623}
 </style>
 </head>
 <body>
-
-<h1>📈 The Social Growth System</h1>
-<p style="font-size:1.1rem;color:var(--fg-muted);">How to grow from 0 to 100K followers without spending a dollar on ads. Complete playbooks for X, LinkedIn, Instagram, and TikTok.</p>
-
-<div class="toc">
-  <strong style="color:var(--fg);">Contents</strong>
-  <ol style="margin-top:8px;">
-    <li>Platform Strategy Overview</li>
-    <li>X (Twitter) Growth Playbook</li>
-    <li>LinkedIn Growth Playbook</li>
-    <li>Instagram Growth Playbook</li>
-    <li>TikTok Growth Playbook</li>
-    <li>90-Day Content Calendar</li>
-    <li>50 Viral Hook Templates</li>
-    <li>Engagement Automation</li>
-    <li>Analytics & Optimization</li>
-  </ol>
+<header>
+<div class="container">
+  <h1>⭐ The 847-Review Playbook</h1>
+  <p class="subtitle">How I earned 847 genuine reviews at a 4.9-star average — and turned a Google rating into the #1 source of new customers for a four-state service business. The exact system, scripts, and templates. No fake reviews, no gimmicks.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-num">847</span><span class="stat-label">Real reviews</span></div>
+    <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Average</span></div>
+    <div class="stat"><span class="stat-num">~40%</span><span class="stat-label">Ask-to-review rate</span></div>
+  </div>
 </div>
+</header>
 
-<hr>
+<div class="container">
 
-<h2>1. Platform Strategy Overview</h2>
+<div class="quote">Reviews are the single most undervalued asset in a local business. They cost nothing to earn and they out-sell every ad you'll ever run. I'd give up my entire ad budget before I'd give up my 847 reviews. Here's exactly how I got them.<br><br>— Alex, The Trades Guy</div>
 
-<p>Your growth stacks across platforms if you do it right. The play: <strong>create once, distribute everywhere, optimize per platform.</strong></p>
+<h2><span class="ch">Part 1</span>Why Reviews Beat Advertising (and the math behind it)</h2>
+<p>When a homeowner searches "gutter cleaning near me," Google shows a map of three businesses. The one with the most reviews and the highest stars gets the call — almost every time. I tracked it for years: <strong>going from 4.6 to 4.9 stars roughly doubled my click-through from that map.</strong></p>
+<p>Here's why it's better than ads:</p>
+<ul>
+<li><strong>Ads stop the second you stop paying.</strong> Reviews compound forever.</li>
+<li><strong>Ads get more expensive every year.</strong> Reviews get cheaper per result as they pile up.</li>
+<li><strong>People trust strangers' reviews more than your ad copy.</strong> 9 out of 10 read reviews before calling a contractor.</li>
+</ul>
+<div class="box win"><h3>The compounding asset</h3><p>One review you earn today is still selling for you in five years. An ad you run today is gone tomorrow. That's the whole thesis. Now let's build the machine that earns them.</p></div>
 
-<div class="card">
-  <h3>The Cross-Platform Funnel</h3>
-  <p><strong>Top of Funnel:</strong> TikTok + Reels — reach new audiences. Short-form video. Entertain or educate in under 60 seconds.</p>
-  <p><strong>Middle of Funnel:</strong> X + LinkedIn — build authority. Thread-style education. Show your expertise. Turn viewers into followers.</p>
-  <p><strong>Bottom of Funnel:</strong> Email list + newsletter — own the relationship. Convert followers into customers.</p>
-</div>
+<div class="divider"></div>
 
-<table>
-  <tr><th>Platform</th><th>Best Content</th><th>Post Frequency</th><th>Growth Lever</th></tr>
-  <tr><td>X (Twitter)</td><td>Threads, hot takes, replies</td><td>3-5x/day</td><td>Reply game + threads</td></tr>
-  <tr><td>LinkedIn</td><td>Story-lessons, carousels</td><td>1-2x/day</td><td>Comments on big accounts</td></tr>
-  <tr><td>Instagram</td><td>Reels + carousels</td><td>1x feed + 1-2 stories/day</td><td>Reels to Explore page</td></tr>
-  <tr><td>TikTok</td><td>Raw educational clips</td><td>1-3x/day</td><td>Hooks in first 1.5s</td></tr>
-</table>
+<h2><span class="ch">Part 2</span>The Timing Secret: Ask at Peak Happiness</h2>
+<p>The biggest mistake businesses make is asking for a review days later, by email, when the customer has moved on. The result: a 2% response rate and a polite ignore.</p>
+<p>I ask at the exact moment of <strong>peak happiness</strong> — when the customer walks outside and sees their gutters flowing clean, the mess bagged and hauled, the downspouts flushed. That emotional high is when people <em>want</em> to say thank you. You just give them a way to do it publicly.</p>
 
-<hr>
+<h3>The in-person ask (40% conversion)</h3>
+<div class="script">"All done — go ahead and take a look. … Glad you're happy with it. Honestly, the biggest thing that helps a small business like mine is a quick Google review. If you've got 30 seconds, I'll text you the link right now — would that be alright?"</div>
+<p>Notice three things: I let them <strong>see the result first</strong>, I'm <strong>honest about why it helps</strong>, and I offer to <strong>remove all friction</strong> by texting the link on the spot.</p>
 
-<h2>2. X (Twitter) Growth Playbook</h2>
+<div class="divider"></div>
 
-<h3>The Algorithm in 2025-2026</h3>
-<p>X rewards: replies (especially to large accounts), long-form threads, and media. It penalizes: external links (put them in the second tweet or reply), overuse of hashtags, and engagement bait phrasing.</p>
-
-<div class="card">
-  <h3>Daily X Routine (1 hour/day)</h3>
-  <ol>
-    <li><strong>Morning (15 min):</strong> Reply to 5-10 accounts with 10K+ followers. Add value — don't just say "great thread." Add a counterpoint, a related experience, or additional data.</li>
-    <li><strong>Midday (15 min):</strong> Post 1 thread or long-form post. Your best content goes here.</li>
-    <li><strong>Afternoon (15 min):</strong> Post 2-3 shorter posts — observations, questions, quick takes.</li>
-    <li><strong>Evening (15 min):</strong> Engage with your replies. Respond to every comment for the first hour after posting.</li>
-  </ol>
-</div>
-
-<div class="highlight">
-  <strong>Growth Hack:</strong> Find 5 accounts with 50K-200K followers in your niche. Turn on notifications. Be the first valuable reply on their posts every day for 30 days. This alone can net you 500-2,000 followers/month.
-</div>
-
-<h3>Thread Structure That Works</h3>
+<h2><span class="ch">Part 3</span>The One-Tap Link (this is where most people lose the review)</h2>
+<p>A customer who has to open Google, search your business, scroll, and find the review button will give up 80% of the time. You must hand them a link that opens directly to the 5-star review box.</p>
 <ol>
-  <li><strong>Tweet 1 (Hook):</strong> Counterintuitive statement or bold claim. End with "Here's why:"</li>
-  <li><strong>Tweet 2:</strong> The problem or context. Why should they care?</li>
-  <li><strong>Tweets 3-5:</strong> The meat. One key point per tweet. Self-contained.</li>
-  <li><strong>Tweet 6:</strong> Bonus insight or counter-argument. Show depth.</li>
-  <li><strong>Tweet 7:</strong> Summary + CTA. "Follow @you for more on [topic]."</li>
+<li>Go to your <strong>Google Business Profile</strong> → "Ask for reviews" → copy your short review link (looks like <code>g.page/r/...</code>).</li>
+<li>Save it as a text shortcut on your phone so you can send it in two seconds.</li>
+<li>Send it before you pull out of the driveway, with this message:</li>
 </ol>
+<div class="script">"Thanks again [name]! Here's that review link — takes 20 seconds and means the world to us: [link]. — Alex, The Trades Guy"</div>
 
-<hr>
+<div class="box"><h3>The follow-up that recovers the "I'll do it later" crowd</h3><p>If they didn't leave one within 2 days, send ONE gentle nudge — never more:</p>
+<div class="script">"Hey [name], hope the gutters are still flowing great! No pressure at all — if you have a sec, that review really helps us out: [link]. Either way, thanks for trusting us with the job."</div>
+<p>This single follow-up recovered roughly a third of the people who meant to and forgot.</p></div>
 
-<h2>3. LinkedIn Growth Playbook</h2>
+<div class="divider"></div>
 
-<h3>The LinkedIn Algorithm</h3>
-<p>LinkedIn's algorithm shows your post to a small sample of your network first. If engagement is high (comments > likes), it expands. The "golden hour" (first 60 minutes) determines everything.</p>
+<h2><span class="ch">Part 4</span>Responding to Every Review (yes, every one)</h2>
+<p>Responding to reviews does two things: it tells the customer you saw them, and it tells <strong>every future reader</strong> that you're engaged and you care. The replies sell as hard as the reviews.</p>
 
-<div class="card">
-  <h3>Content Mix for LinkedIn</h3>
-  <ol>
-    <li><strong>Story-Lesson Posts (40%)</strong> — Personal story + business lesson. These get the most comments.</li>
-    <li><strong>Carousels/PDFs (25%)</strong> — Slide-style documents. LinkedIn pushes these hard in feed.</li>
-    <li><strong>Contrarian Takes (20%)</strong> — Disagree with common advice. Be respectful but firm.</li>
-    <li><strong>Curated Insights (15%)</strong> — "5 lessons from [book/experience/person]" style.</li>
-  </ol>
+<h3>Replying to a 5-star review</h3>
+<div class="script">"Thank you so much, [name]! It was a pleasure getting your gutters cleared before the season. We're always one call away if you need anything. — Alex"</div>
+<p>Specific beats generic. Mention the actual job. A copy-paste "Thanks!" looks lazy; a specific reply looks like a real person who remembers them.</p>
+
+<h3>Replying to a negative review (the most important skill)</h3>
+<div class="box warn"><h3>Stay calm, own it, take it offline</h3>
+<div class="script">"I'm sorry your experience didn't meet our standard, [name] — that's on us and I want to make it right. I've tried to reach you directly; please call me at 856-874-6640 so I can fix this personally. — Alex, owner"</div>
+<p>Never argue. Never blame the customer. A calm, accountable reply to a 1-star review has earned me <em>more</em> jobs than some 5-stars — because the next reader sees an owner who handles problems like a professional.</p></div>
+
+<div class="divider"></div>
+
+<h2><span class="ch">Part 5</span>Turning Reviews Into a Sales Weapon</h2>
+<p>Earning reviews is half the game. Deploying them is the other half.</p>
+<ul>
+<li><strong>Screenshot your best reviews</strong> and put them everywhere: your truck wrap, your Google profile photos, your text confirmations, your social posts.</li>
+<li><strong>Quote a review in your booking texts:</strong> "We're the 4.9★, 847-review crew in the area — see you tomorrow at 9!" Social proof at the moment of decision.</li>
+<li><strong>Feature your review count in your tagline.</strong> "Trusted by 847 neighbors" beats "professional and reliable" every time. Specificity is credibility.</li>
+<li><strong>Use reviews to justify your price.</strong> When someone says "the other guy is cheaper," you say: "He might be. We're the highest-rated in the area for a reason — and the work shows it." Reviews let you stop competing on price.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2><span class="ch">Part 6</span>Your 30-Day Review Sprint</h2>
+<p>Here's the exact plan to go from wherever you are to a visibly stronger rating in one month:</p>
+<ol>
+<li><strong>Days 1–2:</strong> Set up / clean up your Google Business Profile. Get your one-tap review link saved on your phone.</li>
+<li><strong>Every job, starting now:</strong> Ask in person at peak happiness. Text the link before you leave.</li>
+<li><strong>Day 2 after each job:</strong> Send the single follow-up nudge to anyone who hasn't reviewed.</li>
+<li><strong>Daily:</strong> Respond to every new review within 24 hours.</li>
+<li><strong>Day 30:</strong> Count your new reviews, screenshot your best ones, and start deploying them in your booking texts and profile.</li>
+</ol>
+<div class="box win"><h3>What to expect</h3><p>If you ask on every job and remove the friction, expect 35–45% of happy customers to leave a review. At 5 jobs a day, that's ~10 new reviews a week — 40+ a month. In a year, you're the highest-rated business in your area, and the phone rings on its own.</p></div>
+
+<div class="quote">I never bought a single fake review. I never ran a contest. I just asked every happy customer, made it stupidly easy, and replied to every one. Do that for a year and you'll have something no competitor can buy: trust, in public, in writing.<br><br>— Alex</div>
+
+<footer>
+© 2026 The Trades Guy. Yours for life. Questions? <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a><br>
+847 reviews · 4.9★ · 15 years · 4 states
+</footer>
+
 </div>
-
-<div class="highlight">
-  <strong>Key Insight:</strong> LinkedIn's "creator mode" + consistent posting = 5-10x reach increase within 60 days. Turn on creator mode, pick 5 hashtags, and post daily for 2 months.
-</div>
-
-<hr>
-
-<h2>4. Instagram Growth Playbook</h2>
-
-<p>Instagram is Reels-first now. Static posts have 70% less reach than Reels. Your strategy: <strong>Reels for reach, Carousels for saves, Stories for connection.</strong></p>
-
-<div class="card">
-  <h3>Reel Formula That Works</h3>
-  <ol>
-    <li><strong>Hook (0-1.5s):</strong> Visual + text hook simultaneously. Movement in the first frame.</li>
-    <li><strong>Value (1.5-20s):</strong> 3 quick tips. One per "chapter." Text on screen for each.</li>
-    <li><strong>CTA (last 3s):</strong> "Follow for more [niche] tips" or "Comment [word] for the template"</li>
-  </ol>
-  <p><strong>Hashtag strategy:</strong> 3-5 specific hashtags (under 500K posts) + 1-2 broad ones. Don't use 30 — it looks spammy and doesn't help.</p>
-</div>
-
-<hr>
-
-<h2>5. TikTok Growth Playbook</h2>
-
-<p>TikTok is the most meritocratic platform. Quality content wins regardless of follower count. The algorithm tests your video on 200-500 people. High watch time + completion rate = it gets pushed further.</p>
-
-<div class="card">
-  <h3>TikTok Video Structure</h3>
-  <ol>
-    <li><strong>0-1s Pattern Interrupt:</strong> Something that makes them stop scrolling. Quick movement, surprising statement, or visual contrast.</li>
-    <li><strong>1-3s Hook Statement:</strong> "Most people don't know that..." / "Stop doing X if you want Y..."</li>
-    <li><strong>3-45s Value Delivery:</strong> Fast-paced. Jump cuts every 3-5 seconds. Keep energy high.</li>
-    <li><strong>Last 3s CTA:</strong> Loop-friendly ending. "Follow for part 2" creates bookmark behavior.</li>
-  </ol>
-</div>
-
-<hr>
-
-<h2>6. 90-Day Content Calendar Template</h2>
-
-<table>
-  <tr><th>Phase</th><th>Days</th><th>Focus</th><th>Daily Output</th></tr>
-  <tr><td>Setup</td><td>1-7</td><td>Profile optimization, content bank</td><td>Write 30 posts in advance</td></tr>
-  <tr><td>Testing</td><td>8-30</td><td>Post everything, find what works</td><td>3-5 posts/day across platforms</td></tr>
-  <tr><td>Doubling Down</td><td>31-60</td><td>Scale winning formats</td><td>3-5 posts + 30 min engagement</td></tr>
-  <tr><td>Scale</td><td>61-90</td><td>Add new platforms, repurpose</td><td>5-7 posts + collaborations</td></tr>
-</table>
-
-<div class="highlight">
-  <strong>Pro tip:</strong> Batch-create content on Sundays. One 3-hour session should produce 15-20 posts. Schedule them across the week. Never write and post same-day — the quality gap is 2x.
-</div>
-
-<hr>
-
-<h2>7. 50 Viral Hook Templates</h2>
-
-<p>Here are the top 10 highest-performing hooks by category. The full 50 are at the end.</p>
-
-<div class="card">
-  <h3>Contrarian Hooks</h3>
-  <ol>
-    <li>"Stop [common advice]. Here's what actually works:"</li>
-    <li>"[Industry] is lying to you about [topic]."</li>
-    <li>"I [did something unpopular] and here's what happened:"</li>
-    <li>"Unpopular opinion: [bold take]."</li>
-    <li>"The [industry] advice that cost me $[X]:"</li>
-  </ol>
-</div>
-
-<div class="card">
-  <h3>Curiosity Hooks</h3>
-  <ol>
-    <li>"I analyzed [X] [things] and found something weird:"</li>
-    <li>"The [skill] secret nobody talks about:"</li>
-    <li>"What [successful person] knows that you don't:"</li>
-    <li>"This one change [improved metric] by [X]%:"</li>
-    <li>"I tried [thing] for 30 days. Results:"</li>
-  </ol>
-</div>
-
-<div class="card">
-  <h3>Listicle Hooks</h3>
-  <ol>
-    <li>"[Number] [things] I wish I knew before [milestone]:"</li>
-    <li>"[Number] books that changed how I think about [topic]:"</li>
-    <li>"[Number] rules for [achievement] that actually work:"</li>
-    <li>"[Number] tools I use every day as a [role]:"</li>
-    <li>"[Number] signs you're [doing something wrong]:"</li>
-  </ol>
-</div>
-
-<p style="color:var(--fg-muted);"><em>...Full 50-hook library continues in the complete guide. Mix and match these opening patterns across platforms — the hook structures are platform-agnostic even if the delivery format changes.</em></p>
-
-<hr>
-
-<h2>8. Engagement Automation</h2>
-
-<div class="card">
-  <h3>DM Outreach Templates</h3>
-  <p><strong>After they follow you:</strong> "Hey [name] — saw you're into [topic]. What are you working on right now in that space?"</p>
-  <p><strong>After they engage with your content:</strong> "Thanks for the thoughtful comment on my [post]. Curious — what's your take on [related question]?"</p>
-  <p><strong>Collaboration ask:</strong> "Love your content on [topic]. I'm putting together a [thread/post/space] about [specific angle] — would you be open to contributing a quote or insight?"</p>
-</div>
-
-<hr>
-
-<h2>9. Analytics & Optimization</h2>
-
-<table>
-  <tr><th>Metric</th><th>What It Tells You</th><th>Benchmark (Good)</th></tr>
-  <tr><td>Engagement Rate</td><td>Content resonance</td><td>&gt;3% (X), &gt;2% (LI), &gt;5% (IG)</td></tr>
-  <tr><td>Follower Growth Rate</td><td>Funnel health</td><td>&gt;5% month-over-month</td></tr>
-  <tr><td>Link Clicks</td><td>Conversion intent</td><td>&gt;1% of impressions</td></tr>
-  <tr><td>Best Posting Time</td><td>When audience is active</td><td>Test 4 time slots for 2 weeks</td></tr>
-</table>
-
-<div class="highlight">
-  <strong>Weekly Audit Checklist:</strong><br>
-  ☐ Review top 3 posts by engagement — what pattern do they share?<br>
-  ☐ Review bottom 3 posts — what went wrong? (Time? Hook? Topic?)<br>
-  ☐ Check follower demographics — is your audience who you want?<br>
-  ☐ Update content calendar based on learnings<br>
-  ☐ Engage with 5 new accounts in adjacent niches
-</div>
-
-<hr>
-
-<p style="text-align:center;color:var(--fg-dim);padding:40px 0;font-size:0.85rem;">
-  <strong>The Social Growth System</strong><br>
-  v1.0 · Lifetime updates included with purchase<br>
-  Thank you for your purchase.
-</p>
-
 </body>
 </html>

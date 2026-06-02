@@ -1,100 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Complete Digital Business Starter Kit</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Complete Starter Kit — The Trades Guy</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e5e5e5; line-height: 1.7; padding: 40px 24px; }
-  .container { max-width: 720px; margin: 0 auto; }
-  h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; color: #fff; }
-  h2 { font-size: 1.4rem; font-weight: 700; margin: 40px 0 16px; color: #fff; border-bottom: 1px solid #222; padding-bottom: 8px; }
-  h3 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 8px; color: #4ade80; }
-  .subtitle { color: #888; font-size: 1.05rem; margin-bottom: 32px; }
-  .card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
-  .card:hover { border-color: #4ade80; }
-  .card-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; }
-  .card-desc { color: #888; font-size: 0.9rem; }
-  .card-emoji { font-size: 1.8rem; margin-bottom: 8px; }
-  .bonus { background: #0f1a0f; border-color: #1a3a1a; }
-  .bonus .card-title { color: #4ade80; }
-  p { margin-bottom: 16px; color: #bbb; }
-  ul { margin: 8px 0 16px 20px; }
-  li { margin-bottom: 6px; color: #bbb; }
-  .tag { display: inline-block; background: #1a1a2e; color: #818cf8; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-left: 8px; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.7;padding:0 0 80px}
+  .container{max-width:740px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(160deg,#0c160d,#0a0a0a);border-bottom:1px solid #16331a;padding:46px 22px 36px}
+  header .container{padding:0}
+  h1{font-size:2.15rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+  .subtitle{color:#9aa3ad;font-size:1.05rem;max-width:620px}
+  h2{font-size:1.45rem;font-weight:800;color:#fff;margin:48px 0 14px;letter-spacing:-.01em}
+  h3{font-size:1.05rem;font-weight:700;margin:22px 0 8px;color:#34d399}
+  p{margin-bottom:14px;color:#bcc3cb}
+  ul,ol{margin:8px 0 16px 22px}li{margin-bottom:8px;color:#bcc3cb}li strong{color:#eef1f4}
+  .prod{display:block;background:#101410;border:1px solid #1c3320;border-radius:12px;padding:20px 22px;margin-bottom:14px;text-decoration:none;transition:border-color .15s}
+  .prod:hover{border-color:#34d399}
+  .prod .top{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .prod .emoji{font-size:1.6rem}
+  .prod .nm{font-weight:800;color:#fff;font-size:1.08rem;flex:1}
+  .prod .val{color:#34d399;font-size:.8rem;font-weight:700;background:#0c1f10;border:1px solid #16331a;padding:3px 10px;border-radius:20px}
+  .prod .ds{color:#9aa3ad;font-size:.92rem}
+  .prod .go{color:#34d399;font-weight:700;font-size:.88rem;margin-top:10px;display:inline-block}
+  .bonus{background:#12100a;border-color:#2c2410}
+  .bonus:hover{border-color:#f5a623}
+  .bonus .nm{color:#f5a623}.bonus .val{color:#f5a623;background:#1a1508;border-color:#3a2a08}.bonus .go{color:#f5a623}
+  .valuebox{background:#0c140d;border:1px solid #16331a;border-radius:12px;padding:22px 24px;margin:26px 0;text-align:center}
+  .valuebox .line{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #16331a;color:#bcc3cb;font-size:.95rem}
+  .valuebox .line:last-of-type{border:none}
+  .valuebox .total{font-size:1.3rem;font-weight:800;color:#34d399;margin-top:12px}
+  .valuebox .strike{color:#666;text-decoration:line-through}
+  .quote{border-left:3px solid #34d399;padding:14px 20px;margin:24px 0;background:#0c140d;border-radius:0 8px 8px 0;font-style:italic;color:#d8dde2}
+  footer{margin-top:54px;padding-top:26px;border-top:1px solid #1e1e22;color:#5b636d;font-size:.85rem;text-align:center}
+  footer a{color:#f5a623}
 </style>
 </head>
 <body>
+<header>
 <div class="container">
-  <div style="text-align:center; margin-bottom: 48px;">
-    <div style="font-size: 3rem; margin-bottom: 12px;">🎯</div>
-    <h1>The Complete Digital Business Starter Kit</h1>
-    <p class="subtitle">All 6 products + exclusive bonuses. Everything you need to launch.</p>
-  </div>
+  <h1>🎯 The Complete Starter Kit</h1>
+  <p class="subtitle">Everything I know about building a real service business — every playbook, every script, every template, plus exclusive bonuses you can't get separately. The whole system, one price.</p>
+</div>
+</header>
 
-  <h2>📦 Your Products</h2>
+<div class="container">
 
-  <div class="card">
-    <div class="card-emoji">🤖</div>
-    <div class="card-title">The AI Prompt Engineering Playbook <span class="tag">$19 value</span></div>
-    <div class="card-desc">100+ production-ready prompts organized by business use case. Chain-of-thought patterns, few-shot examples, model-specific tips.</div>
-  </div>
+<div class="quote">If I were starting over tomorrow in a brand-new town, this is the exact kit I'd want in my hands on day one. It's 15 years of learning the hard way, packaged so you don't have to. — Alex, The Trades Guy</div>
 
-  <div class="card">
-    <div class="card-emoji">📈</div>
-    <div class="card-title">The Social Growth System <span class="tag">$29 value</span></div>
-    <div class="card-desc">Complete organic growth blueprint for X, LinkedIn, Instagram, TikTok. Content calendars, hook templates, engagement scripts.</div>
-  </div>
+<h2>📦 Everything Included</h2>
+<p>Click any item below to open it — all of these are yours, in full, for life:</p>
 
-  <div class="card">
-    <div class="card-emoji">🚀</div>
-    <div class="card-title">The Digital Product Blueprint <span class="tag">$39 value</span></div>
-    <div class="card-desc">14-day launch system. Product ideation, validation, pricing, landing pages, Stripe setup, email sequences, launch playbook.</div>
-  </div>
+<a class="prod" href="/products/local-service-business-blueprint.html">
+  <div class="top"><span class="emoji">🏗️</span><span class="nm">The Local Service Business Blueprint</span><span class="val">$149 value</span></div>
+  <div class="ds">The complete 8-chapter playbook: first 10 customers, pricing for profit, the phone-is-your-cash-register system, hiring crews, scheduling, cash flow &amp; taxes, and scaling to multiple states.</div>
+  <span class="go">Open the Blueprint →</span>
+</a>
 
-  <div class="card">
-    <div class="card-emoji">✍️</div>
-    <div class="card-title">The Ultimate Copywriting Swipe File <span class="tag">$24 value</span></div>
-    <div class="card-desc">200+ annotated copy examples. Headlines, emails, landing pages, CTAs — each deconstructed with psychological triggers.</div>
-  </div>
+<a class="prod" href="/products/847-review-playbook.html">
+  <div class="top"><span class="emoji">⭐</span><span class="nm">The 847-Review Playbook</span><span class="val">$39 value</span></div>
+  <div class="ds">The exact review-generation system that earned 847 genuine 4.9-star reviews — timing, one-tap links, follow-up scripts, response templates, and a 30-day review sprint.</div>
+  <span class="go">Open the Review Playbook →</span>
+</a>
 
-  <div class="card">
-    <div class="card-emoji">📋</div>
-    <div class="card-title">Notion Life OS Template <span class="tag">$14 value</span></div>
-    <div class="card-desc">All-in-one Notion workspace: goals, tasks, habits, finance, projects. Just duplicate and start.</div>
-  </div>
+<a class="prod" href="/products/contractor-copy-templates.html">
+  <div class="top"><span class="emoji">✍️</span><span class="nm">The Contractor Copy Swipe File</span><span class="val">$29 value</span></div>
+  <div class="ds">Headlines, email subject lines, ad hooks, booking scripts, review asks, and review responses — all annotated with why they work, ready to copy and adapt to your trade.</div>
+  <span class="go">Open the Swipe File →</span>
+</a>
 
-  <div class="card">
-    <div class="card-emoji">💡</div>
-    <div class="card-title">SaaS Idea Validator Toolkit <span class="tag">$34 value</span></div>
-    <div class="card-desc">48-hour validation sprint. Customer interview scripts, smoke tests, willingness-to-pay experiments, go/no-go framework.</div>
-  </div>
+<h2>🎁 Exclusive Bonuses (Kit Only)</h2>
+<p>These aren't sold separately. They're yours because you got the complete kit.</p>
 
-  <h2>🎁 Exclusive Bonuses</h2>
+<div class="prod bonus">
+  <div class="top"><span class="emoji">📋</span><span class="nm">Bonus 1 — The Daily Operating Checklist</span><span class="val">Kit only</span></div>
+  <div class="ds">The one-page routine that kept four states running:</div>
+  <ul>
+    <li><strong>Morning:</strong> Confirm today's jobs by text. Check weather. Route by geography (one zip cluster per day).</li>
+    <li><strong>On every job:</strong> Photo before → do the work → photo after → walk the customer through it → ask for the review → text the link before leaving the driveway.</li>
+    <li><strong>End of day:</strong> Log jobs completed, payments collected, reviews requested. Set aside 25–30% of revenue for taxes immediately.</li>
+    <li><strong>Weekly:</strong> Re-book reminders to last year's customers. Respond to every review. Review your numbers (revenue/job, jobs/day, repeat rate).</li>
+  </ul>
+</div>
 
-  <div class="card bonus">
-    <div class="card-emoji">🎬</div>
-    <div class="card-title">BONUS: The System Video Walkthrough</div>
-    <div class="card-desc">30-minute video showing how to use all 6 products together as a unified business system. Not sold separately.</div>
-  </div>
+<div class="prod bonus">
+  <div class="top"><span class="emoji">💰</span><span class="nm">Bonus 2 — The Pricing Calculator Framework</span><span class="val">Kit only</span></div>
+  <div class="ds">Never guess a price again. The formula:</div>
+  <ul>
+    <li><strong>Step 1:</strong> Add monthly costs (truck, gas, insurance, tools, software, YOUR salary). Divide by billable hours = your true cost/hour.</li>
+    <li><strong>Step 2:</strong> Set your base job at 2.5–3× your cost/hour for the time it takes. (Most beginners price at 1× and go broke.)</li>
+    <li><strong>Step 3:</strong> Build three tiers — Basic, Clean+Inspect (your anchor), and Full Service. Most customers pick the middle.</li>
+    <li><strong>Step 4:</strong> Raise prices 10% a year. You'll lose the cheapest, least-loyal 20% and make more from the rest.</li>
+  </ul>
+</div>
 
-  <div class="card bonus">
-    <div class="card-emoji">✅</div>
-    <div class="card-title">BONUS: Private Launch Checklist</div>
-    <div class="card-desc">The exact 47-step checklist used to launch this store. Pre-launch, launch day, post-launch — nothing missed.</div>
-  </div>
+<div class="prod bonus">
+  <div class="top"><span class="emoji">📞</span><span class="nm">Bonus 3 — The 90-Day Launch Plan</span><span class="val">Kit only</span></div>
+  <div class="ds">A week-by-week sequence to go from zero to a booked calendar:</div>
+  <ul>
+    <li><strong>Weeks 1–2:</strong> Neighborhood sweep + text everyone you know. Get your first 10 jobs. Set up Google Business Profile.</li>
+    <li><strong>Weeks 3–6:</strong> Run the review system on every job. Get to 20+ reviews. Start re-booking happy customers.</li>
+    <li><strong>Weeks 7–10:</strong> Dial in pricing tiers. Track your numbers. Test one paid lead source (Google LSA) against your cost-per-job.</li>
+    <li><strong>Weeks 11–13:</strong> If you're maxed out, document your process and bring on your first part-time helper. You're now a business, not a job.</li>
+  </ul>
+</div>
 
-  <h2>🚀 How To Use This Kit</h2>
-  <p><strong>Week 1:</strong> Read the Digital Product Blueprint. Pick your product idea. Validate with the SaaS Idea Validator.</p>
-  <p><strong>Week 2:</strong> Write your copy using the Swipe File. Set up your prompts with the AI Playbook. Build your landing page.</p>
-  <p><strong>Week 3:</strong> Launch using the Blueprint's launch checklist. Start growing with the Social Growth System.</p>
-  <p><strong>Ongoing:</strong> Manage everything in Notion Life OS. Review, iterate, scale.</p>
+<div class="valuebox">
+  <div class="line"><span>The Local Service Business Blueprint</span><span>$149</span></div>
+  <div class="line"><span>The 847-Review Playbook</span><span>$39</span></div>
+  <div class="line"><span>The Contractor Copy Swipe File</span><span>$29</span></div>
+  <div class="line"><span>3 Exclusive Bonuses</span><span>Priceless</span></div>
+  <div class="total">Total value <span class="strike">$217+</span> &nbsp;→&nbsp; Your price: $97</div>
+</div>
 
-  <div style="text-align: center; margin-top: 48px; padding: 24px; background: #111; border-radius: 12px;">
-    <p style="color: #4ade80; font-weight: 700; font-size: 1.1rem;">Total value: $159 → You paid: $97</p>
-    <p style="color: #666; font-size: 0.85rem;">You saved $62 and got 2 bonuses not available anywhere else.</p>
-  </div>
+<div class="quote">There is no hack. There's a phone you answer, a price that's fair, work you're proud of, and a review you earned — repeated ten thousand times. This kit hands you all of it. Now go build something real.<br><br>— Alex</div>
+
+<footer>
+© 2026 The Trades Guy. The complete kit is yours for life. Questions? <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a><br>
+15 years · 4 states · 50,000+ jobs · 847 reviews · 4.9★
+</footer>
+
 </div>
 </body>
 </html>

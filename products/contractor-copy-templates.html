@@ -1,171 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Ultimate Copywriting Swipe File</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Contractor Copy Swipe File — The Trades Guy</title>
 <style>
-  :root { --bg: #1C1B18; --surface: #222120; --fg: #f5f3f0; --fg-muted: rgba(245,243,240,0.7); --accent: #8B7FEA; --green: #4ade80; --border: rgba(245,243,240,0.08); }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 48px 24px; }
-  h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.03em; }
-  h2 { font-size: 1.3rem; font-weight: 700; margin: 32px 0 12px; color: var(--accent); }
-  h3 { font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px; }
-  p { color: var(--fg-muted); margin-bottom: 12px; }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 16px 0; }
-  .swipe { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 12px 0; border-left: 3px solid var(--accent); }
-  .swipe .copy-text { font-size: 1.05rem; margin-bottom: 8px; font-style: italic; }
-  .swipe .source { font-size: 0.8rem; color: var(--fg-dim); }
-  .swipe .analysis { font-size: 0.85rem; color: var(--green); margin-top: 6px; }
-  .highlight { background: rgba(139,127,234,0.1); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: var(--fg-muted); }
-  ul, ol { color: var(--fg-muted); margin: 0 0 16px 20px; }
-  li { margin-bottom: 6px; }
-  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
-  .copy-btn { float: right; background: var(--accent); border: none; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.7;padding:0 0 80px}
+  .container{max-width:760px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(160deg,#161009,#0a0a0a);border-bottom:1px solid #221a0c;padding:46px 22px 36px}
+  header .container{padding:0}
+  h1{font-size:2.1rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+  .subtitle{color:#9aa3ad;font-size:1.05rem;max-width:640px}
+  h2{font-size:1.45rem;font-weight:800;color:#a78bfa;margin:48px 0 6px;letter-spacing:-.01em}
+  .sec-note{color:#777;font-size:.9rem;margin-bottom:18px}
+  .card{background:#101014;border:1px solid #232330;border-radius:12px;padding:18px 20px;margin-bottom:14px;position:relative}
+  .card:hover{border-color:#a78bfa}
+  .card .copytext{font-style:italic;color:#eef1f4;font-size:1.02rem;padding-right:70px;margin-bottom:10px}
+  .card .src{color:#7a8290;font-size:.82rem;margin-bottom:8px}
+  .card .why{color:#34d399;font-size:.9rem;line-height:1.6}
+  .card .why b{color:#5eead4}
+  .copybtn{position:absolute;top:16px;right:16px;background:#a78bfa;color:#15101f;border:none;border-radius:7px;padding:6px 14px;font-weight:700;font-size:.82rem;cursor:pointer;font-family:inherit}
+  .copybtn:active{background:#34d399}
+  .intro{background:#12100a;border:1px solid #2c2410;border-radius:12px;padding:20px 22px;margin:24px 0;color:#bcc3cb}
+  .intro b{color:#f5a623}
+  footer{margin-top:54px;padding-top:26px;border-top:1px solid #1e1e22;color:#5b636d;font-size:.85rem;text-align:center}
+  footer a{color:#f5a623}
+  .count{display:inline-block;background:#1a1a2e;color:#a78bfa;padding:3px 12px;border-radius:20px;font-size:.78rem;font-weight:700;margin-top:14px}
 </style>
 </head>
 <body>
-
-<h1>✍️ The Ultimate Copywriting Swipe File</h1>
-<p style="font-size:1.1rem;color:var(--fg-muted);">200+ high-converting headlines, hooks, emails, and landing pages — deconstructed and explained. Every example annotated with why it works.</p>
-
-<hr>
-
-<h2>Section 1: Headline Formulas (50+ Patterns)</h2>
-
-<h3>Pattern 1: The "How To" Headline</h3>
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">How to Retire at 45 With $2.5 Million — Even If You Earn Under $100K</div>
-  <div class="source">Source: Personal finance newsletter, 350K subscribers</div>
-  <div class="analysis">🔍 <strong>Why it works:</strong> Specific outcome ($2.5M at 45) + specific objection handled ("even if under $100K"). The specificity signals credibility; the objection-handling expands the audience. Pattern: "How to [specific result] — even if [common barrier]."</div>
+<header>
+<div class="container">
+  <h1>✍️ The Contractor Copy Swipe File</h1>
+  <p class="subtitle">High-converting headlines, hooks, email subject lines, and customer scripts — built for trades and service businesses. Every example annotated with <em>why it works</em> so you can adapt it to your business. Tap "Copy" to grab any line and paste it into your own ad, email, or website.</p>
+  <span class="count">Headlines · Subject Lines · Ad Hooks · Booking Scripts · Review Asks · Follow-ups</span>
 </div>
+</header>
 
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">How I Built a $50K/Month Business Working 20 Hours a Week</div>
-  <div class="source">Source: SaaS founder Twitter thread, 2.4M impressions</div>
-  <div class="analysis">🔍 <strong>Why it works:</strong> First-person + specific revenue + desirable lifestyle hook. "How I" is more intimate than "How to." The juxtaposition of high income + low hours triggers the "what's the secret?" curiosity loop.</div>
+<div class="container">
+
+<div class="intro"><b>How to use this:</b> Don't copy these word-for-word — swap in your trade, your city, your numbers. The point is the <em>structure</em>. A headline that works for gutters works for HVAC, roofing, landscaping, or plumbing once you swap the specifics. Each "Why it works" tells you the psychology so you can write ten more of your own.</div>
+
+<h2>Section 1 — Headlines That Get Clicked</h2>
+<p class="sec-note">Use these for landing pages, Google Business posts, and ad headlines.</p>
+
+<div class="card"><div class="copytext">"Cherry Hill's Highest-Rated Gutter Cleaning — 847 Reviews, 4.9 Stars"</div><div class="src">Use as: homepage / map-pack headline</div><div class="why"><b>Why it works:</b> Specific location + specific proof (847, 4.9) signals credibility instantly. Numbers beat adjectives every time.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Clogged Gutters? We'll Clear Them This Week — Starting at $149"</div><div class="src">Use as: storm-season ad</div><div class="why"><b>Why it works:</b> Names the exact pain, the speed of relief, and an honest price. Removes the #1 friction (uncertainty about cost).</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"The Gutter Crew Your Neighbors Already Trust"</div><div class="src">Use as: Nextdoor / local social</div><div class="why"><b>Why it works:</b> Social proof + locality. "Your neighbors" makes it feel safe and pre-vetted.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Don't Wait for the Leak. Clean Gutters Stop $4,000 Repairs."</div><div class="src">Use as: educational ad / blog headline</div><div class="why"><b>Why it works:</b> Reframes a $149 service as cheap insurance against a $4,000 problem. Sells on avoided pain, not features.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Booked Solid by Word of Mouth — Here's Why"</div><div class="src">Use as: brand story headline</div><div class="why"><b>Why it works:</b> Curiosity gap ("here's why") + the strongest possible social proof (we don't even need to advertise).</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"How to Tell If Your Gutters Are About to Cost You Thousands"</div><div class="src">Use as: lead-magnet / video title</div><div class="why"><b>Why it works:</b> "How to tell if..." triggers self-diagnosis. People click to check whether they're at risk.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Same-Day Gutter Cleaning When the Forecast Says Storm"</div><div class="src">Use as: urgency ad</div><div class="why"><b>Why it works:</b> Ties your service to an external deadline (weather) that creates real, honest urgency.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"15 Years. 4 States. 50,000 Gutters. One Standard."</div><div class="src">Use as: about / trust headline</div><div class="why"><b>Why it works:</b> Rhythm of escalating numbers builds authority, then "one standard" lands the value: consistency.</div><button class="copybtn">Copy</button></div>
+
+<h2>Section 2 — Email &amp; Text Subject Lines</h2>
+<p class="sec-note">For customer follow-ups, seasonal reminders, and re-booking campaigns.</p>
+
+<div class="card"><div class="copytext">"Your gutters are due (before the leaves drop)"</div><div class="src">Seasonal re-book reminder</div><div class="why"><b>Why it works:</b> Personal ("your"), specific timing, and a natural deadline. Reads like a helpful nudge, not a sales blast.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Quick question about your gutters, [name]"</div><div class="src">Re-engagement</div><div class="why"><b>Why it works:</b> Curiosity + personalization. "Quick question" gets opened because it feels low-effort and personal.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Storm's coming Thursday — want us out before it?"</div><div class="src">Weather-triggered offer</div><div class="why"><b>Why it works:</b> Real urgency tied to a real event. Feels like you're looking out for them, not selling.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"It's been about a year since we cleaned yours"</div><div class="src">Annual re-book</div><div class="why"><b>Why it works:</b> Reminds them of the relationship and the recurring need without any pressure.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Saved you a spot this week"</div><div class="src">Scarcity / assumptive booking</div><div class="why"><b>Why it works:</b> Implies demand and does the deciding for them. "Saved you a spot" feels like a favor.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Re: the repair we flagged last visit"</div><div class="src">Upsell follow-up</div><div class="why"><b>Why it works:</b> "Re:" feels like an ongoing conversation, not a cold pitch. References something they already know about.</div><button class="copybtn">Copy</button></div>
+
+<h2>Section 3 — Ad &amp; Social Hooks</h2>
+<p class="sec-note">First lines that stop the scroll. Use on Facebook, Nextdoor, Instagram, X.</p>
+
+<div class="card"><div class="copytext">"I've never run a single ad in 15 years. Here's how I stayed booked."</div><div class="src">Brand-story hook</div><div class="why"><b>Why it works:</b> Pattern interrupt — a business owner admitting they don't advertise makes people lean in. Authenticity sells.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"This $149 job just saved a homeowner $6,000. Here's what we found."</div><div class="src">Before/after hook</div><div class="why"><b>Why it works:</b> Specific dollar contrast + curiosity. People want to see what was "found."</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"3 signs your gutters are about to fail (and what it costs if you wait)"</div><div class="src">Listicle hook</div><div class="why"><b>Why it works:</b> Numbered list promises a quick, scannable payoff. The parenthetical adds stakes.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"The most expensive home repair nobody sees coming starts in the gutters."</div><div class="src">Educational hook</div><div class="why"><b>Why it works:</b> Big claim + hidden danger. Makes the invisible problem feel urgent.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"We fired three crews before we got this right. Lesson inside."</div><div class="src">Story / authority hook</div><div class="why"><b>Why it works:</b> Vulnerability + curiosity gap. Admitting mistakes builds trust faster than bragging.</div><button class="copybtn">Copy</button></div>
+
+<h2>Section 4 — Booking &amp; Phone Scripts</h2>
+<p class="sec-note">Word-for-word scripts to close more of the calls and texts you already get.</p>
+
+<div class="card"><div class="copytext">"Thanks for calling, this is Alex. … Got it — I can have someone out tomorrow morning. It's $149 for a full clean and we'll flag anything that needs repair before it gets worse. Want me to lock that in?"</div><div class="src">Inbound call close</div><div class="why"><b>Why it works:</b> Names price up front, assumes the booking, and adds value (we'll catch problems). Ends with a yes/no close.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Happy to give you a quote! Quickest way is a couple photos of your gutters texted to this number — I'll send your exact price in a few minutes."</div><div class="src">Text quote request</div><div class="why"><b>Why it works:</b> Removes the home-visit friction, gives instant gratification, and keeps the conversation moving.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"We're the 4.9-star, 847-review crew in the area — see you tomorrow between 9 and 11. I'll text when we're 20 minutes out."</div><div class="src">Booking confirmation</div><div class="why"><b>Why it works:</b> Reinforces social proof at the moment of commitment and sets clear, professional expectations.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"I hear you on price. The cheaper guy might save you $40 today — but we're the highest-rated in the area because we don't leave until it's right. Worth it for your roofline."</div><div class="src">Price objection</div><div class="why"><b>Why it works:</b> Acknowledges the objection, reframes to value + risk, leans on proof. Never argues.</div><button class="copybtn">Copy</button></div>
+
+<h2>Section 5 — Review Request Scripts</h2>
+<p class="sec-note">The exact words that earned 847 reviews. (Full system in the 847-Review Playbook.)</p>
+
+<div class="card"><div class="copytext">"Glad you're happy with it! The biggest thing that helps a small business like mine is a quick Google review — I'll text you the link right now if that's alright?"</div><div class="src">In-person ask</div><div class="why"><b>Why it works:</b> Asks at peak happiness, is honest about why, and removes friction by offering to send the link immediately.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"Thanks again, [name]! Here's that review link — takes 20 seconds and means the world to us: [link]"</div><div class="src">Text with link</div><div class="why"><b>Why it works:</b> Low-effort framing ("20 seconds") + genuine gratitude. Sent immediately while the goodwill is fresh.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"No pressure at all — if you have a sec, that review really helps us out: [link]. Either way, thanks for trusting us with the job."</div><div class="src">2-day follow-up nudge</div><div class="why"><b>Why it works:</b> Gives an easy out ("no pressure"), which paradoxically increases compliance. Recovers ~1/3 of forgetters.</div><button class="copybtn">Copy</button></div>
+
+<h2>Section 6 — Review Responses</h2>
+<p class="sec-note">Replying to every review tells future readers you care. Templates for both kinds.</p>
+
+<div class="card"><div class="copytext">"Thank you so much, [name]! It was a pleasure getting your gutters cleared before the season. We're always one call away if you need anything."</div><div class="src">5-star reply</div><div class="why"><b>Why it works:</b> Specific to the job (not generic), warm, and plants the seed for repeat business.</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="copytext">"I'm sorry your experience didn't meet our standard, [name] — that's on us and I want to make it right. Please call me directly at [phone] so I can fix this personally. — Alex, owner"</div><div class="src">Negative review reply</div><div class="why"><b>Why it works:</b> Calm, accountable, takes it offline. The next reader sees an owner who handles problems like a pro — which sells.</div><button class="copybtn">Copy</button></div>
+
+<footer>
+© 2026 The Trades Guy. Yours for life — copy, adapt, and use freely in your own business.<br>
+Questions? <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
+</footer>
+
 </div>
-
-<h3>Pattern 2: The List Headline</h3>
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">7 Pricing Tactics That Increased Our Revenue 340% (One Is Free to Implement Today)</div>
-  <div class="source">Source: B2B SaaS blog, #1 on Hacker News</div>
-  <div class="analysis">🔍 <strong>Why it works:</strong> Odd numbers outperform even numbers. "340%" is specific (not "300%"). The parenthetical hook ("one is free") creates a "which one?" curiosity gap that drives clicks.</div>
-</div>
-
-<h3>Pattern 3: The Contrarian Headline</h3>
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">Why Your "Growth Mindset" Is Actually Holding You Back</div>
-  <div class="source">Source: Psychology Today, 12K shares</div>
-  <div class="analysis">🔍 <strong>Why it works:</strong> Attacks sacred cow. People who identify with "growth mindset" feel a defensive urge to click and argue, or a curiosity to see if they're the exception. Pattern: "Why [widely accepted thing] is [negative outcome]."</div>
-</div>
-
-<hr>
-
-<h2>Section 2: Email Subject Lines</h2>
-
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">Can I ask you something? (takes 10 seconds)</div>
-  <div class="source">Source: Ramit Sethi, 50%+ open rate</div>
-  <div class="analysis">🔍 <strong>Why it works:</strong> Personal + curiosity + low-friction promise. The "(takes 10 seconds)" defuses the "I don't have time" objection before they finish reading the subject line.</div>
-</div>
-
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">You're not going to like this email</div>
-  <div class="source">Source: Copyhackers, 45% open rate</div>
-  <div class="analysis">🔍 <strong>Why it works:</strong> Reverse psychology. People instinctively open emails that suggest they might disagree with the content. The pattern works because it signals "this isn't fluff — this is real talk."</div>
-</div>
-
-<hr>
-
-<h2>Section 3: Social Media Hooks</h2>
-
-<h3>Twitter/X Hooks</h3>
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">I've analyzed 10,000+ viral tweets. The ones that blow up all do the same 3 things:</div>
-  <div class="analysis">🔍 <strong>Pattern:</strong> "I've [done impressive amount of work] and found [simple pattern]." Works because it borrows authority from the data + promises a shortcut to the reader.</div>
-</div>
-
-<div class="swipe">
-  <button class="copy-btn" onclick="navigator.clipboard.writeText(this.querySelector('.copy-text').innerText)">Copy</button>
-  <div class="copy-text">Stop building an audience. Build an email list instead. Here's why:</div>
-  <div class="analysis">🔍 <strong>Pattern:</strong> Contrarian command + shift to alternative + curiosity gap. The "Here's why:" ending is one of the highest-performing thread openers on X.</div>
-</div>
-
-<hr>
-
-<h2>Section 4: Landing Page Frameworks</h2>
-
-<div class="card">
-  <h3>PAS (Problem-Agitate-Solution)</h3>
-  <p><strong>Problem:</strong> "Most freelancers spend 40% of their time on admin work instead of billable hours."</p>
-  <p><strong>Agitate:</strong> "That's 16 hours a week. $1,600 in lost revenue. $83,200 a year. Gone. To sending invoices and chasing clients."</p>
-  <p><strong>Solution:</strong> "FreelanceFlow automates every admin task — invoicing, contracts, follow-ups — in one click. The average user saves 12 hours in their first week."</p>
-  <div class="analysis">🔍 <strong>Why:</strong> The agitate step is where most copy fails. Notice the escalation: 40% → 16 hours → $1,600/week → $83K/year. Each step makes the pain more concrete and costly.</div>
-</div>
-
-<div class="card">
-  <h3>AIDA (Attention-Interest-Desire-Action)</h3>
-  <p><strong>Attention:</strong> "The average SaaS churn rate is 5% monthly. Top performers are under 2%."</p>
-  <p><strong>Interest:</strong> "The difference isn't product quality — it's onboarding. Users who complete guided setup are 4x more likely to still be paying at month 6."</p>
-  <p><strong>Desire:</strong> "OnboardKit gives you the exact same onboarding flows used by Stripe and Notion. Interactive tours, checklists, and contextual help — installed in 5 minutes."</p>
-  <p><strong>Action:</strong> "Start your free trial. 3-minute setup. No credit card."</p>
-</div>
-
-<hr>
-
-<h2>Section 5: CTA Button Copy That Converts</h2>
-
-<table style="width:100%;border-collapse:collapse;margin:16px 0;color:var(--fg-muted);font-size:0.9rem;">
-  <tr><th style="padding:10px;text-align:left;border-bottom:1px solid var(--border);color:var(--fg);">Weak CTA</th><th style="padding:10px;text-align:left;border-bottom:1px solid var(--border);color:var(--fg);">Strong CTA</th><th style="padding:10px;text-align:left;border-bottom:1px solid var(--border);color:var(--fg);">Why</th></tr>
-  <tr><td style="padding:10px;border-bottom:1px solid var(--border);">"Submit"</td><td style="padding:10px;border-bottom:1px solid var(--border);">"Get My Free Guide"</td><td style="padding:10px;border-bottom:1px solid var(--border);">Reinforces what they get; "Submit" is about you</td></tr>
-  <tr><td style="padding:10px;border-bottom:1px solid var(--border);">"Buy Now"</td><td style="padding:10px;border-bottom:1px solid var(--border);">"Start Growing Today"</td><td style="padding:10px;border-bottom:1px solid var(--border);">Describes outcome, not transaction</td></tr>
-  <tr><td style="padding:10px;border-bottom:1px solid var(--border);">"Sign Up"</td><td style="padding:10px;border-bottom:1px solid var(--border);">"Try It Free — 30 Seconds"</td><td style="padding:10px;border-bottom:1px solid var(--border);">Reduces perceived friction</td></tr>
-  <tr><td style="padding:10px;border-bottom:1px solid var(--border);">"Learn More"</td><td style="padding:10px;border-bottom:1px solid var(--border);">"See How It Works"</td><td style="padding:10px;border-bottom:1px solid var(--border);">More specific, suggests demonstration</td></tr>
-</table>
-
-<div class="highlight">
-  <strong>The CTA Test:</strong> Can the user picture exactly what happens after they click? If not, rewrite it. "Get My Free Guide" → they picture a download. "Submit" → they picture... nothing. The difference in conversion is often 20-40%.
-</div>
-
-<hr>
-
-<h2>Section 6: Psychological Triggers Reference</h2>
-
-<table>
-  <tr><th>Trigger</th><th>How to Use</th><th>Example</th></tr>
-  <tr><td>Scarcity</td><td>Limited quantity or time</td><td>"Only 50 spots available"</td></tr>
-  <tr><td>Social Proof</td><td>Numbers, testimonials, logos</td><td>"Join 10,000+ developers"</td></tr>
-  <tr><td>Authority</td><td>Credentials, media mentions</td><td>"As featured in Forbes"</td></tr>
-  <tr><td>Reciprocity</td><td>Give value before asking</td><td>"Here's a free template..." then pitch</td></tr>
-  <tr><td>Commitment</td><td>Small yes before big ask</td><td>"Free trial" → "Upgrade to Pro"</td></tr>
-  <tr><td>Liking</td><td>Shared identity or values</td><td>"Built by developers, for developers"</td></tr>
-  <tr><td>Loss Aversion</td><td>What they'll lose by not acting</td><td>"Every day without X costs you $Y"</td></tr>
-  <tr><td>Curiosity Gap</td><td>Tease information they want</td><td>"The one metric that actually matters"</td></tr>
-</table>
-
-<hr>
-
-<p style="text-align:center;color:var(--fg-dim);padding:40px 0;font-size:0.85rem;">
-  <strong>The Ultimate Copywriting Swipe File</strong><br>
-  v1.0 · 200+ examples and growing<br>
-  Thank you for your purchase.
-</p>
-
 <script>
-document.querySelectorAll('.copy-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const original = this.textContent;
-    this.textContent = 'Copied!';
-    this.style.background = '#4ade80';
-    setTimeout(() => { this.textContent = original; this.style.background = 'var(--accent)'; }, 1500);
+document.querySelectorAll('.copybtn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var t=btn.parentElement.querySelector('.copytext').textContent.trim();
+    navigator.clipboard.writeText(t).then(function(){
+      var o=btn.textContent;btn.textContent='Copied ✓';
+      setTimeout(function(){btn.textContent=o;},1400);
+    });
   });
 });
 </script>
