@@ -4,29 +4,173 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Order Confirmed — The Trades Guy</title>
+<meta name="robots" content="noindex">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e5e5e5; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#0b0d10;--surface:#14171c;--surface2:#1b1f26;--border:#262b33;
+    --fg:#f3f5f7;--muted:#9aa3ad;--amber:#f5a623;--amber-d:#d98c0e;
+    --green:#34d399;--radius:14px;
+  }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1200px 600px at 50% -200px,#15191f 0%,var(--bg) 60%);
+    color:var(--fg);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  nav{
+    display:flex;align-items:center;gap:20px;padding:18px 24px;
+    border-bottom:1px solid var(--border);background:rgba(11,13,16,.8);
+    backdrop-filter:blur(10px);position:sticky;top:0;z-index:10;
+  }
+  nav .brand{font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+  nav .brand span{color:var(--amber)}
+  nav .back{margin-left:auto;color:var(--muted);font-weight:600;font-size:.9rem;
+    display:inline-flex;align-items:center;gap:6px;transition:color .15s}
+  nav .back:hover{color:var(--fg)}
+  .wrap{flex:1;width:100%;max-width:680px;margin:0 auto;padding:56px 24px 80px}
+  .badge{
+    width:84px;height:84px;border-radius:50%;margin:0 auto 28px;
+    background:linear-gradient(135deg,rgba(52,211,153,.18),rgba(52,211,153,.06));
+    border:1px solid rgba(52,211,153,.4);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 8px rgba(52,211,153,.05);
+  }
+  .badge svg{width:42px;height:42px;stroke:var(--green);stroke-width:3;fill:none;
+    stroke-linecap:round;stroke-linejoin:round}
+  h1{font-size:2.1rem;font-weight:800;text-align:center;letter-spacing:-.03em;margin-bottom:10px}
+  .sub{text-align:center;color:var(--muted);font-size:1.05rem;margin-bottom:40px;max-width:440px;margin-left:auto;margin-right:auto}
+  .featured{
+    background:linear-gradient(135deg,var(--surface2),var(--surface));
+    border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:32px;
+    box-shadow:0 12px 40px rgba(0,0,0,.35);position:relative;overflow:hidden;
+  }
+  .featured::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--amber),var(--amber-d))}
+  .featured .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+  .featured h2{font-size:1.4rem;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+  .featured p{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+  .dl-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
+    padding:15px 24px;background:linear-gradient(135deg,var(--amber),var(--amber-d));
+    color:#1a1205;font-weight:800;font-size:1rem;border-radius:10px;
+    transition:transform .12s,box-shadow .12s;box-shadow:0 6px 20px rgba(245,166,35,.25);
+  }
+  .dl-btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(245,166,35,.35)}
+  .dl-btn svg{width:18px;height:18px;stroke:#1a1205;stroke-width:2.5;fill:none;
+    stroke-linecap:round;stroke-linejoin:round}
+  .section-label{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px 2px}
+  .list{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+  .item{
+    display:flex;align-items:center;gap:16px;padding:16px 18px;background:var(--surface);
+    border:1px solid var(--border);border-radius:12px;transition:border-color .15s,background .15s;
+  }
+  .item:hover{border-color:var(--amber);background:var(--surface2)}
+  .item .ico{width:38px;height:38px;border-radius:9px;flex-shrink:0;
+    background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.25);
+    display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .item .meta{flex:1;min-width:0}
+  .item .meta .nm{font-weight:700;font-size:.95rem}
+  .item .meta .ds{color:var(--muted);font-size:.82rem}
+  .item .go{color:var(--amber);font-weight:700;font-size:.88rem;flex-shrink:0;
+    display:inline-flex;align-items:center;gap:5px}
+  .item .go svg{width:15px;height:15px;stroke:var(--amber);stroke-width:2.5;fill:none;
+    stroke-linecap:round;stroke-linejoin:round}
+  .help{text-align:center;padding:24px;background:var(--surface);border:1px solid var(--border);
+    border-radius:12px;color:var(--muted);font-size:.92rem}
+  .help strong{color:var(--fg)}
+  .help a{color:var(--amber);font-weight:600}
+  footer{border-top:1px solid var(--border);padding:24px;text-align:center;
+    color:#5b636d;font-size:.82rem}
+  footer .lock{display:inline-flex;align-items:center;gap:6px}
+  footer svg{width:13px;height:13px;stroke:#5b636d;stroke-width:2;fill:none}
+  @media(max-width:520px){
+    h1{font-size:1.7rem}.wrap{padding:40px 18px 60px}
+    .item .go span{display:none}
+  }
 </style>
 </head>
 <body>
-<nav><a class="brand" href="/store.html">The Trades Guy</a><a class="accent" href="/store.html">Store</a><a href="/store.html" style="margin-left:auto; color:#4ade80; font-weight:600;">← Back to Store</a></nav>
-<div class="content"><div class="checkmark">𜐥</div><h1>Order Confirmed!</h1><p class="subtitle">Your purchase is ready. Download your files below.</p>
-<div class="download-card" id="purchase-card" style="display:none;"><h2 id="product-title">Your Purchase</h2><p id="product-desc">Download your file below.</p><a class="download-btn" id="product-download" href="#">Download Now</a></div>
-<div class="all-products"><h3>All Product Downloads</h3>
-<a class="product-link" href="/products/local-service-business-blueprint.html"><span class="name">The Local Service Business Blueprint</span><span class="dl">Download →</span></a>
-<a class="product-link" href="/products/complete-starter-kit.html"><span class="name">The Complete Starter Kit</span><span class="dl">Download →</span></a>
-<a class="product-link" href="/products/847-review-playbook.html"><span class="name">The 847-Review Playbook</span><span class="dl">Download →</span></a>
-<a class="product-link" href="/products/contractor-copy-templates.html"><span class="name">Contractor Copy Templates</span><span class="dl">Download →</span></a></div>
-<div class="help"><p>💙 <strong>Need help?</strong> Email <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a></p></div></div>
-<footer><p>© 2026 The Trades Guy. Secure payment via Stripe · Instant delivery</p></footer>
+<nav>
+  <a class="brand" href="/store.html">The Trades <span>Guy</span></a>
+  <a class="back" href="/store.html">&larr; Back to store</a>
+</nav>
+
+<div class="wrap">
+  <div class="badge">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  </div>
+  <h1>Order confirmed</h1>
+  <p class="sub">Thank you for your purchase. Your files are ready to download below — instant access, yours forever.</p>
+
+  <div class="featured" id="featured" style="display:none">
+    <div class="eyebrow">Your purchase</div>
+    <h2 id="f-title">Your Product</h2>
+    <p id="f-desc">Download your file below.</p>
+    <a class="dl-btn" id="f-dl" href="#">
+      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      Download now
+    </a>
+  </div>
+
+  <p class="section-label" id="all-label">Your downloads</p>
+  <div class="list">
+    <a class="item" href="/products/local-service-business-blueprint.html">
+      <span class="ico">🏗️</span>
+      <span class="meta"><span class="nm">The Local Service Business Blueprint</span><span class="ds">15 years of systems, condensed</span></span>
+      <span class="go"><span>Download</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+    </a>
+    <a class="item" href="/products/complete-starter-kit.html">
+      <span class="ico">🎯</span>
+      <span class="meta"><span class="nm">The Complete Starter Kit</span><span class="ds">All products + exclusive bonuses</span></span>
+      <span class="go"><span>Download</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+    </a>
+    <a class="item" href="/products/847-review-playbook.html">
+      <span class="ico">⭐</span>
+      <span class="meta"><span class="nm">The 847-Review Playbook</span><span class="ds">The review-generation system</span></span>
+      <span class="go"><span>Download</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+    </a>
+    <a class="item" href="/products/contractor-copy-templates.html">
+      <span class="ico">✍️</span>
+      <span class="meta"><span class="nm">Contractor Copy Templates</span><span class="ds">200+ annotated copy examples</span></span>
+      <span class="go"><span>Download</span><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+    </a>
+  </div>
+
+  <div class="help">
+    <strong>Need help?</strong> Email <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a> and we'll get back to you fast.
+  </div>
+</div>
+
+<footer>
+  <span class="lock">
+    <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+    Secure payment via Stripe · Instant delivery
+  </span>
+  <div style="margin-top:8px">© 2026 The Trades Guy. All rights reserved.</div>
+</footer>
+
 <script>
-var p = new URLSearchParams(window.location.search);
-var product = p.get('product') || p.get('token') || '';
-var ps = {'local-service-business-blueprint':{title:'The Local Service Business Blueprint',desc:'Your complete blueprint for building a service business. 15 years of systems.',url:'/products/local-service-business-blueprint.html'},'complete-starter-kit':{ title:'The Complete Starter Kit',desc:'All 6 products + bonuses. Everything you need.',url:'/products/complete-starter-kit.html'},'847-review-playbook':{title:'The 847-Review Playbook',desc:'Step-by-step system for getting reviews.',url:'/products/847-review-playbook.html'},'contractor-copy-templates':{title:'Contractor Copy Templates',desc:'200+ copy examples.',url:'/products/contractor-copy-templates.html'}};
-var slugMap = {'review-playbook':'847-review-playbook','copy-templates':'contractor-copy-templates','wype-file':'contractor-copy-templates','blueprint':'local-service-business-blueprint','social-growth-system':'847-review-playbook','copywriting-swipe-file':'contractor-copy-templates'};
-var slug = slugMap[product] || product;
-var info = ps[slug];
-if (info) { document.getElementById('purchase-card').style.display = 'block'; document.getElementById('product-title').textContent = info.title; document.getElementById('product-desc').textContent = info.desc; document.getElementById('product-download').href = info.url; }
+(function(){
+  var products={
+    'local-service-business-blueprint':{t:'The Local Service Business Blueprint',d:'Your complete blueprint for building a service business — 15 years of systems.',u:'/products/local-service-business-blueprint.html'},
+    'complete-starter-kit':{t:'The Complete Starter Kit',d:'All products plus exclusive bonuses. Everything you need to launch.',u:'/products/complete-starter-kit.html'},
+    '847-review-playbook':{t:'The 847-Review Playbook',d:'The step-by-step system for generating reviews and social proof.',u:'/products/847-review-playbook.html'},
+    'contractor-copy-templates':{t:'Contractor Copy Templates',d:'200+ annotated copy examples for headlines, emails, and pages.',u:'/products/contractor-copy-templates.html'}
+  };
+  var p=new URLSearchParams(window.location.search);
+  var slug=(p.get('product')||p.get('token')||'').trim();
+  if(slug && products[slug]){
+    var x=products[slug];
+    document.getElementById('f-title').textContent=x.t;
+    document.getElementById('f-desc').textContent=x.d;
+    document.getElementById('f-dl').setAttribute('href',x.u);
+    document.getElementById('featured').style.display='block';
+    document.getElementById('all-label').textContent='Also available to you';
+  }
+})();
 </script>
-</body></html>
+</body>
+</html>
