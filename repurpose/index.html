@@ -7,7 +7,7 @@
 <meta name="description" content="Paste any text. Get an X thread, LinkedIn post, email, TikTok script, and blog intro — instantly. Powered by your own OpenAI key.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--fg:#eef1f6;--muted:#7a8290;--accent:#7c3aed;--accent2:#a78bfa;--green:#34d399;--radius:14px}
+:root{--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--fg:#eef1f6;--muted:#7a8290;--accent:#f5a623;--accent2:#f5a623;--green:#34d399;--radius:14px}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh}
 a{color:var(--accent2);text-decoration:none}
 nav{display:flex;align-items:center;padding:16px 24px;border-bottom:1px solid var(--border)}
@@ -18,14 +18,14 @@ nav .links a{color:var(--muted);font-weight:600;font-size:.9rem}
 .hero h1{font-size:2.8rem;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:16px}
 .hero h1 em{font-style:normal;color:var(--accent2)}
 .hero p{font-size:1.15rem;color:var(--muted);max-width:520px;margin:0 auto 32px}
-.cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:linear-gradient(135deg,var(--accent),#9333ea);color:#fff;font-weight:800;font-size:1.05rem;border-radius:12px;border:none;cursor:pointer;transition:transform .12s,box-shadow .12s;box-shadow:0 6px 24px rgba(124,58,237,.3)}
-.cta:hover{transform:translateY(-1px);box-shadow:0 10px 32px rgba(124,58,237,.4)}
+.cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:linear-gradient(135deg,var(--accent),#d4910e);color:#fff;font-weight:800;font-size:1.05rem;border-radius:12px;border:none;cursor:pointer;transition:transform .12s,box-shadow .12s;box-shadow:0 6px 24px rgba(245,166,35,.3)}
+.cta:hover{transform:translateY(-1px);box-shadow:0 10px 32px rgba(245,166,35,.4)}
 .section{max-width:900px;margin:0 auto;padding:0 24px 60px}
 .section h2{font-size:1.8rem;font-weight:800;margin-bottom:8px;text-align:center}
 .section .sub{color:var(--muted);text-align:center;margin-bottom:40px;font-size:1.05rem}
 .how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
 .step{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 22px;text-align:center}
-.step .num{width:44px;height:44px;border-radius:50%;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent2);font-size:1.1rem;margin-bottom:14px}
+.step .num{width:44px;height:44px;border-radius:50%;background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.3);display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent2);font-size:1.1rem;margin-bottom:14px}
 .step h3{font-size:1.05rem;margin-bottom:6px}.step p{color:var(--muted);font-size:.92rem}
 .outputs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .out{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px}
@@ -47,7 +47,7 @@ nav .links a{color:var(--muted);font-weight:600;font-size:.9rem}
 .input-area textarea:focus{outline:none;border-color:var(--accent)}
 .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:28px}
 .controls select{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--fg);font-family:inherit;font-size:.9rem}
-.go-btn{padding:12px 28px;background:linear-gradient(135deg,var(--accent),#9333ea);color:#fff;font-weight:700;border-radius:10px;border:none;cursor:pointer;font-size:.95rem}
+.go-btn{padding:12px 28px;background:linear-gradient(135deg,var(--accent),#d4910e);color:#fff;font-weight:700;border-radius:10px;border:none;cursor:pointer;font-size:.95rem}
 .go-btn:disabled{opacity:.5;cursor:not-allowed}
 .output-area{display:none}
 .output-area.active{display:block}
@@ -61,14 +61,14 @@ nav .links a{color:var(--muted);font-weight:600;font-size:.9rem}
 .settings input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--fg);font-family:monospace;font-size:.88rem}
 .settings p{color:var(--muted);font-size:.82rem;margin-top:8px}
 .key-status{font-size:.82rem;margin-top:6px}.key-status.ok{color:var(--green)}.key-status.missing{color:#f87171}
-footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:#444;font-size:.82rem}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:#5b636d;font-size:.82rem}footer a{color:#f5a623}
 @media(max-width:640px){.hero h1{font-size:2rem}.how{grid-template-columns:1fr}.outputs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav>
-  <a class="brand" href="/">Repurpose<span>.ai</span></a>
-  <div class="links"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#tool">Open tool</a></div>
+  <a class="brand" href="/store.html">The Trades <span>Guy</span></a>
+  <div class="links"><a href="/store.html">Store</a><a href="/coaching.html">Coaching</a> <a href="/freebies.html">Free Samples</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#tool">Open tool</a></div>
 </nav>
 
 <div class="hero" id="hero">
