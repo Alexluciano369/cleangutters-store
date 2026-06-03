@@ -4,33 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sales Closing Coaching — The Trades Guy</title>
+<meta name="description" content="1-on-1 sales closing coaching. Weekly calls, custom scripts, live objection coaching. Starting at $500/mo.">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.7;padding:0 0 80px}
-  .container{max-width:700px;margin:0 auto;padding:0 22px}
-  nav{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1e1e22}
-  nav .brand{font-weight:800;font-size:1.1rem}.nav .brand span{color:#f5a623}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#13151a;color:#d8dde2;line-height:1.7;padding:0 0 80px}
+  div.container{max-width:700px;margin:0 auto;padding:0 22px}
+  nav{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1e1e22;position:relative}
+  nav .brand{font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:#fff;text-decoration:none}.nav .brand span,nav .brand span{color:#f5a623}
   nav .links{margin-left:auto;display:flex;gap:22px}
-  nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}
-  h1{font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
-  h2{font-size:1.4rem;font-weight:800;color:#fff;margin:44px 0 8px}
-  h3{font-size:1.08rem;font-weight:700;color:#f5a623;margin:24px 0 8px}
-  p{margin-bottom:14px;color:#bcc3cb}
-  ul{margin:8px 0 16px 22px}li{margin-bottom:8px;color:#bcc3cb}li strong{color:#eef1f4}
-  .quote{border-left:3px solid #f5a623;padding:16px 22px;margin:24px 0;background:#100c05;border-radius:0 10px 10px 0;font-style:italic}
-  .price-box{background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:36px 28px;text-align:center;margin:36px 0}
-  .price-box .amount{font-size:2.8rem;font-weight:800;color:#f5a623}
-  .price-box .per{font-size:.95rem;color:#9aa3ad;margin-bottom:16px}
-  .cta{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:#f5a623;color:#1a1205;font-weight:800;border-radius:10px;border:none;cursor:pointer;font-size:1rem;text-decoration:none;transition:transform .12s}
-  .cta:hover{transform:translateY(-1px)}
-  .box{background:#0e0e12;border:1px solid #1e1e22;border-radius:12px;padding:22px 24px;margin:20px 0}
-  footer{margin-top:60px;padding-top:26px;border-top:1px solid #1e1e22;color:#555;font-size:.85rem;text-align:center}footer a{color:#f5a623}
+  nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600;transition:color .15s;text-decoration:none}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}
+  .hamburger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px 8px;margin-left:auto}
+  @media(max-width:640px){
+    .hamburger{display:block}
+    nav .links{display:none;position:absolute;top:100%;left:0;right:0;background:#13151a;border-bottom:1px solid #1e1e22;flex-direction:column;padding:12px 24px;gap:14px;z-index:100}
+    nav .links.open{display:flex}
+    nav .links a{font-size:1rem;padding:4px 0}
+  }
 </style>
 <script data-goatcounter="https://tradesguy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <nav>
   <a class="brand" href="/">The Trades <span>Guy</span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
   <div class="links">
     <a href="/store.html">Playbooks</a>
     <a href="/freebies.html">Free Samples</a>
@@ -38,63 +34,17 @@
     <a href="/repurpose/">Repurpose Tool</a>
   </div>
 </nav>
+
+<script>
+document.querySelectorAll('nav .links a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('nav .links').classList.remove('open'));
+});
+</script>
 <div class="container">
   <h1 style="margin-top:48px">📞 Sales Closing Coaching</h1>
-  <p style="color:#9aa3ad;font-size:1.05rem;margin-bottom:30px">Weekly calls to turn you into a closer. Not theory. Not motivation. The exact scripts, objections, and psychology that closed 50,000+ jobs over 15 years.</p>
+  <p style="color:#9aa3ad;font-size:1.05rem;margin-bottom:30px">1-on-1 coaching to turn you into a closer. Not theory. Not motivation. The exact scripts, objections, and psychology that closed 50,000+ jobs over 15 years.</p>
 
   <div class="quote">The difference between a $50K business and a $500K business isn't leads — it's close rate. I went from closing 30% of calls to 60% by changing 4 sentences. That doubled my revenue without spending a dollar more on marketing. I'll teach you those 4 sentences — and everything around them.<br><br>— Alex, The Trades Guy</div>
-
-  <h2>What you get</h2>
-  <div class="box">
-    <h3>📞 Weekly 60-minute call</h3>
-    <p>Direct access to me. We work on ONE close-rate problem per week: phone scripts, objection handling, pricing as a close, follow-up sequences, training your crew to close. No group calls. No recorded fluff. Just us.</p>
-  </div>
-  <div class="box">
-    <h3>📋 Custom script pack after every call</h3>
-    <p>After every session, I send you written scripts tailored to YOUR specific objections. The ones YOUR customers are actually giving you. Not generic templates — yours.</p>
-  </div>
-  <div class="box">
-    <h3>💬 Live objection coaching</h3>
-    <p>Between calls, text me an objection you just got. I'll text you back the exact response within the hour. Real-time coaching when the deal is on the line.</p>
-  </div>
-  <div class="box">
-    <h3>🎯 Close rate tracking</h3>
-    <p>We track your close rate from day one. Week over week, you see the numbers move. No guessing — just data.</p>
-  </div>
-  <div class="box">
-    <h3>📘 Full playbook access</h3>
-    <p>Every digital product in the store — The Closing Playbook, the Objection Swipe File, the Review Engine — all included immediately.</p>
-  </div>
-
-  <h2>What we actually work on</h2>
-  <ul>
-    <li><strong>The one-call close:</strong> How to book 60%+ of inbound calls on the first ring</li>
-    <li><strong>Price anchoring:</strong> Why you should never discount, and what to do instead</li>
-    <li><strong>Objection flipping:</strong> The exact words for every "no" you'll hear</li>
-    <li><strong>The assumptive close:</strong> Booking without asking permission</li>
-    <li><strong>Follow-up sequences:</strong> Recovering "I'll think about it" at 30%+ rates</li>
-    <li><strong>Training your crew:</strong> How to make your team close so you can stop doing it</li>
-    <li><strong>Post-sale closing:</strong> Getting reviews, referrals, and repeat bookings</li>
-  </ul>
-
-  <h2>Who this is for</h2>
-  <ul>
-    <li>Service business owners who answer the phone but can't convert the call</li>
-    <li>Contractors who lose jobs to cheaper competitors (and shouldn't)</li>
-    <li>Operators who do great work but can't get customers to come back</li>
-    <li>Anyone who wants to stop competing on price and start closing on value</li>
-  </ul>
-
-  <div class="price-box">
-    <div class="amount">$500</div>
-    <div class="per">per month · cancel anytime · 4 calls + live text coaching</div>
-    <a class="cta" href="mailto:support@thetradesguy.com?subject=Coaching%20Application%20—%20Sales%20Closing">Apply now</a>
-    <p style="color:#9aa3ad;font-size:.85rem;margin-top:14px">I take 5 clients at a time. If I'm full, I'll add you to the waitlist.</p>
-  </div>
-
-  <footer>
-    © 2026 The Trades Guy. <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
-  </footer>
 </div>
 </body>
 </html>
