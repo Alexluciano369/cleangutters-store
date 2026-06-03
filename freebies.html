@@ -7,44 +7,47 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.7}
-a{color:inherit}
-nav{display:flex;align-items:center;gap:24px;padding:16px 24px;border-bottom:1px solid #1e1e22;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);z-index:50}
-nav .brand{font-weight:800;font-size:1.05rem;text-decoration:none;letter-spacing:-.02em}nav .brand span{color:#f5a623}
-nav .links{margin-left:auto;display:flex;gap:20px}nav .links a{color:#9aa3ad;font-size:.9rem;font-weight:600;text-decoration:none}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}nav .links a:hover{color:#fff}
+a{color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1e1e22;position:relative;background:#0a0a0a}
+nav .brand{font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:#fff;text-decoration:none}nav .brand span{color:#f5a623}
+nav .links{margin-left:auto;display:flex;gap:22px}nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600;text-decoration:none;transition:color .15s}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px 8px;margin-left:auto}
+@media(max-width:640px){.hamburger{display:block}nav .links{display:none;position:absolute;top:100%;left:0;right:0;background:#13151a;border-bottom:1px solid #1e1e22;flex-direction:column;padding:12px 24px;gap:14px;z-index:100}nav .links.open{display:flex}nav .links a{font-size:1rem;padding:4px 0}}
 .container{max-width:760px;margin:0 auto;padding:0 22px}
 header{padding:54px 22px 40px;text-align:center}
 h1{font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
 .subtitle{color:#9aa3ad;font-size:1.05rem;max-width:520px;margin:0 auto}
+/* Email gate */
+.gate{background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:32px 28px;text-align:center;margin:0 auto 36px;max-width:520px}
+.gate h3{font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px}
+.gate p{color:#9aa3ad;font-size:.92rem;margin-bottom:18px}
+.gate .row{display:flex;gap:10px;max-width:400px;margin:0 auto}
+.gate input{flex:1;padding:12px 16px;background:#0a0e14;border:1px solid #232330;border-radius:10px;color:#fff;font-size:.95rem;font-family:inherit;outline:none}
+.gate input:focus{border-color:#f5a623}
+.gate button{padding:12px 22px;background:#f5a623;color:#1a1205;font-weight:800;border-radius:10px;font-size:.95rem;cursor:pointer;border:none;font-family:inherit;white-space:nowrap}
+.gate button:disabled{opacity:.5}
+.gate .err{color:#f87171;font-size:.82rem;margin-top:8px;display:none}
+/* Cards */
 .card{background:#101014;border:1px solid #232330;border-radius:14px;padding:26px 24px;margin-bottom:20px}
 .card h2{font-size:1.3rem;font-weight:800;color:#f5a623;margin-bottom:8px}
-.card p{color:#bcc3cb;margin-bottom:14px}
+.card p.teaser{color:#bcc3cb;margin-bottom:14px}
 .card .content{background:#0a0e14;border:1px solid #1e1e2e;border-radius:10px;padding:18px 20px;margin:14px 0;color:#eef1f4;font-size:.93rem;line-height:1.75}
 .card .content h3{color:#f5a623;font-size:1rem;margin:18px 0 6px}
 .card .content h3:first-child{margin-top:0}
-.card .content ul{margin:6px 0 12px 20px}card .content li{margin-bottom:6px}
-.card .content ol{margin:6px 0 12px 20px}.card .content li{margin-bottom:6px}
+.card .content ul,.card .content ol{margin:6px 0 12px 20px}
+.card .content li{margin-bottom:6px}
 .copybtn{display:inline-block;padding:8px 18px;background:#f5a623;color:#1a1205;font-weight:700;border-radius:8px;font-size:.85rem;cursor:pointer;border:none;font-family:inherit;margin-top:8px}.copybtn:active{background:#34d399}
 .bottom{background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:32px 24px;text-align:center;margin:40px 0}
 .bottom h2{color:#fff;font-size:1.4rem;margin-bottom:8px}
 .bottom p{color:#9aa3ad;margin-bottom:18px}
 .bottom a{display:inline-block;padding:14px 32px;background:#f5a623;color:#1a1205;font-weight:800;border-radius:10px;font-size:1rem;text-decoration:none}
 footer{margin-top:50px;padding-top:24px;border-top:1px solid #1e1e22;color:#5b636d;font-size:.85rem;text-align:center;padding-bottom:40px}footer a{color:#f5a623}
-
-  nav{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1e1e22;position:relative}
-  nav .brand{font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:#fff;text-decoration:none}.nav .brand span,nav .brand span{color:#f5a623}
-  nav .links{margin-left:auto;display:flex;gap:22px}
-  nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600;transition:color .15s;text-decoration:none}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}
-  .hamburger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px 8px;margin-left:auto}
-  @media(max-width:640px){
-    .hamburger{display:block}
-    nav .links{display:none;position:absolute;top:100%;left:0;right:0;background:#13151a;border-bottom:1px solid #1e1e22;flex-direction:column;padding:12px 24px;gap:14px;z-index:100}
-    nav .links.open{display:flex}
-    nav .links a{font-size:1rem;padding:4px 0}
-  }
+.hidden{display:none!important}
 </style>
 <script data-goatcounter="https://tradesguy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+
 <nav>
   <a class="brand" href="/">The Trades <span>Guy</span></a>
   <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
@@ -56,35 +59,40 @@ footer{margin-top:50px;padding-top:24px;border-top:1px solid #1e1e22;color:#5b63
   </div>
 </nav>
 
-<script>
-document.querySelectorAll('nav .links a').forEach(a => {
-  a.addEventListener('click', () => document.querySelector('nav .links').classList.remove('open'));
-});
-</script>
 <header>
   <h1>🎁 Free Samples</h1>
-  <p class="subtitle">No email required. No catch. Real tools from 15 years and 50,000+ jobs. Grab what helps.</p>
+  <p class="subtitle">Real tools from 15 years and 50,000+ jobs. Enter your email to unlock all 3.</p>
 </header>
 
 <div class="container">
 
+<!-- Email Gate -->
+<div class="gate" id="gate">
+  <h3>Unlock your free samples</h3>
+  <p>Get instant access to 5 AI prompts, a 7-day growth checklist, and 3 headline formulas — all from real field experience.</p>
+  <div class="row">
+    <input type="email" id="gate-email" placeholder="your@email.com" required>
+    <button id="gate-btn" onclick="unlock()">Unlock →</button>
+  </div>
+  <div class="err" id="gate-err"></div>
+</div>
+
+<!-- Gated content (hidden until email submitted) -->
+<div id="gated-content" class="hidden">
+
 <!-- FREEBIE 1: 5 AI Prompts -->
 <div class="card">
   <h2>🤖 5 AI Prompts That Close More Jobs</h2>
-  <p>Copy-paste these into ChatGPT, Claude, or any AI tool. Each one is trained on my closing framework — objection handling, price anchoring, follow-up sequences.</p>
+  <p class="teaser">Copy-paste these into ChatGPT, Claude, or any AI tool. Each one is trained on my closing framework.</p>
   <div class="content">
     <h3>Prompt 1: Objection Handler</h3>
     <p>You are a sales closing expert who has closed 50,000+ home service jobs. A customer just said: "[INSERT OBJECTION]." Give me 3 word-for-word rebuttals using Dave Yoho's "Reduce to the Ridiculous" method, Zig Ziglar's "Feel, Felt, Found" technique, and Chris Voss's calibrated questions. Keep each under 3 sentences.</p>
-
     <h3>Prompt 2: Price Anchor</h3>
     <p>I'm selling [SERVICE] for [PRICE]. The customer thinks it's too expensive. Create a price anchoring script that: 1) Breaks the cost into a daily amount, 2) Stacks the value of everything included, 3) Compares to the cost of NOT doing it. Use Dave Yoho's reduce-to-the-ridiculous framework.</p>
-
     <h3>Prompt 3: Follow-Up Sequence</h3>
     <p>Write a 3-touch follow-up sequence for a customer who got a quote but didn't book. Touch 1: 24 hours later (text message, casual). Touch 2: 3 days later (address the real objection). Touch 3: 7 days later (scarcity/urgency). Keep each under 2 sentences. Use Chris Voss's labeling technique.</p>
-
     <h3>Prompt 4: Review Request</h3>
     <p>Write a review request message for a customer who just had their gutters cleaned and said "looks great!" Include: 1) A genuine thank you, 2) Why reviews matter for a small business, 3) A direct link placeholder. Keep it under 3 sentences. Make it feel human, not corporate.</p>
-
     <h3>Prompt 5: Referral Ask</h3>
     <p>Write a referral request for a happy customer. Include: 1) Reference the specific work done, 2) Offer a $25 credit for each referral, 3) Make it easy to share (suggest texting a friend). Keep it casual and genuine. Under 4 sentences.</p>
   </div>
@@ -94,26 +102,20 @@ document.querySelectorAll('nav .links a').forEach(a => {
 <!-- FREEBIE 2: 7-Day Growth Checklist -->
 <div class="card">
   <h2>📈 7-Day Service Business Growth Checklist</h2>
-  <p>One action per day. Each one is something I actually did in my first year that moved the needle. No theory — just what works.</p>
+  <p class="teaser">One action per day. Each one is something I actually did in my first year. No theory.</p>
   <div class="content">
     <h3>Day 1: Answer the Phone</h3>
     <p>Set up your phone to ring to you on the first call. No voicemail. No auto-attendant. 78% of service jobs go to whoever answers first. This one habit built my business.</p>
-
     <h3>Day 2: Get Your First Review</h3>
-    <p>Call your best past customer. Say: "Hey, it's Alex. Quick favor — would you mind leaving me a Google review? I'll text you the link." Ask at peak happiness. 40% say yes.</p>
-
+    <p>Call your best past customer. Say: "Hey, it's [name]. Quick favor — would you mind leaving me a Google review? I'll text you the link." Ask at peak happiness. 40% say yes.</p>
     <h3>Day 3: Knock 10 Doors</h3>
     <p>Walk your neighborhood. Notice something specific about their property. Say: "Hi, I noticed [specific thing]. I can fix that for $[price]. Want me to take a look while I'm here?" Don't pitch. Observe. Then make the yes easy.</p>
-
     <h3>Day 4: Build Your Pricing</h3>
     <p>Price for profit, not for volume. My rule: materials × 3 = your price. If that feels "too expensive," you're talking to the wrong customer. Never be the cheapest — be the best.</p>
-
     <h3>Day 5: Create a Follow-Up System</h3>
     <p>Every quote that doesn't book gets a text in 24 hours: "Hey [name], a slot opened tomorrow in your area — want me to lock it in before someone grabs it?" 30% of my pipeline came from follow-ups.</p>
-
     <h3>Day 6: Get 3 More Reviews</h3>
     <p>Text every customer from the past 2 weeks. Same script: "Glad you're happy! Biggest help for a small business like mine is a quick Google review — want me to text you the link?" Stack reviews. They compound.</p>
-
     <h3>Day 7: Build Your Referral Engine</h3>
     <p>Text your happiest customer: "Thanks for the review! Know any neighbors who could use their gutters done? Send them my way and I'll knock $25 off your next clean." Word of mouth is the cheapest marketing on earth.</p>
   </div>
@@ -123,18 +125,16 @@ document.querySelectorAll('nav .links a').forEach(a => {
 <!-- FREEBIE 3: 3 Headline Formulas -->
 <div class="card">
   <h2>✍️ 3 Headline Formulas That Book Jobs</h2>
-  <p>Use these for Google Ads, Facebook posts, flyers, door hangers, or your website. Each one is tested on thousands of real leads.</p>
+  <p class="teaser">Use these for Google Ads, Facebook posts, flyers, door hangers, or your website. Tested on thousands of real leads.</p>
   <div class="content">
     <h3>Formula 1: The Specific Number</h3>
     <p>"[NUMBER] [PEOPLE] in [AREA] Trust Us to [RESULT]"</p>
     <p><strong>Example:</strong> "847 Homeowners in Cherry Hill Trust Us to Keep Their Gutters Clean"</p>
     <p><strong>Why it works:</strong> Specific numbers beat adjectives. "847" is more believable than "hundreds."</p>
-
     <h3>Formula 2: The Risk Reversal</h3>
     <p>"[SERVICE] — Or You Don't Pay"</p>
     <p><strong>Example:</strong> "Professional Gutter Cleaning — If You're Not Happy, You Don't Pay"</p>
     <p><strong>Why it works:</strong> Removes the risk entirely. The guarantee IS the pitch.</p>
-
     <h3>Formula 3: The Cost of Doing Nothing</h3>
     <p>"[PROBLEM] Costs $[AMOUNT]. Fixing It Costs $[SMALLER AMOUNT]."</p>
     <p><strong>Example:</strong> "A Clogged Gutter Costs $4,000 in Foundation Damage. Cleaning It Costs $149."</p>
@@ -149,9 +149,45 @@ document.querySelectorAll('nav .links a').forEach(a => {
   <a href="/store.html">See the full store →</a>
 </div>
 
+</div><!-- /gated-content -->
+</div><!-- /container -->
+
 <footer>
   © 2026 The Trades Guy · <a href="/store.html">Store</a> · <a href="/coaching.html">Coaching</a> · <a href="/repurpose/">Content Tool</a>
 </footer>
-</div>
+
+<script>
+const API_BASE = window.RPURPOSE_API || 'https://cet-compute-holdings-visitors.trycloudflare.com';
+
+// Check if already unlocked
+if (localStorage.getItem('ttg_unlocked') === '1') {
+  showContent();
+}
+
+function showContent() {
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('gated-content').classList.remove('hidden');
+}
+
+async function unlock() {
+  const email = document.getElementById('gate-email').value.trim();
+  const err = document.getElementById('gate-err');
+  const btn = document.getElementById('gate-btn');
+  if (!email || !email.includes('@')) { err.textContent = 'Please enter a valid email.'; err.style.display = 'block'; return; }
+  err.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Unlocking...';
+  try {
+    await fetch(API_BASE + '/hooks/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, slug: 'freebies', source: 'freebies-page' })
+    });
+  } catch (e) { /* fail silently — still unlock */ }
+  localStorage.setItem('ttg_unlocked', '1');
+  localStorage.setItem('ttg_email', email);
+  showContent();
+}
+</script>
 </body>
 </html>
