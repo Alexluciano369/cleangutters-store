@@ -6,88 +6,123 @@
 <title>The Objection Handling Swipe File — The Trades Guy</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.7;padding:0 0 80px}
-  .container{max-width:760px;margin:0 auto;padding:0 22px}
-  header{background:linear-gradient(160deg,#161009,#0a0a0a);border-bottom:1px solid #221a0c;padding:46px 22px 36px}
-  h1{font-size:2.1rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
-  .subtitle{color:#9aa3ad;font-size:1.05rem;max-width:640px}
-  h2{font-size:1.45rem;font-weight:800;color:#a78bfa;margin:48px 0 6px;letter-spacing:-.01em}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.7}
+  a{color:inherit}
+  nav{display:flex;align-items:center;gap:24px;padding:16px 24px;border-bottom:1px solid #1e1e22;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);z-index:50}
+  nav .brand{font-weight:800;font-size:1.05rem;text-decoration:none;letter-spacing:-.02em}nav .brand span{color:#f5a623}
+  nav .links{margin-left:auto;display:flex;gap:20px}nav .links a{color:#9aa3ad;font-size:.9rem;font-weight:600;text-decoration:none}nav .links a:hover{color:#fff}
+  .container{max-width:780px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(160deg,#161009,#0a0a0a);border-bottom:1px solid #221a0c;padding:48px 22px 38px}
+  h1{font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+  .subtitle{color:#9aa3ad;font-size:1.05rem;max-width:650px}
+  h2{font-size:1.45rem;font-weight:800;color:#a78bfa;margin:50px 0 6px;letter-spacing:-.01em}
   .sec-note{color:#777;font-size:.9rem;margin-bottom:18px}
   .card{background:#101014;border:1px solid #232330;border-radius:12px;padding:18px 20px;margin-bottom:14px;position:relative}
   .card:hover{border-color:#a78bfa}
-  .card .objection{color:#f87171;font-size:.85rem;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
-  .card .copytext{font-style:italic;color:#eef1f4;font-size:1.02rem;padding-right:70px;margin-bottom:10px}
-  .card .why{color:#34d399;font-size:.9rem;line-height:1.6}.card .why b{color:#5eead4}
+  .card .objection{color:#f87171;font-size:.85rem;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+  .card .copytext{font-style:italic;color:#eef1f4;font-size:1rem;padding-right:78px;margin-bottom:10px}
+  .card .why{color:#34d399;font-size:.88rem;line-height:1.55}.card .why b{color:#5eead4}
+  .card .guru{display:inline-block;margin-top:8px;font-size:.72rem;color:#9aa3ad;background:#1a1a22;border:1px solid #2a2a36;border-radius:5px;padding:2px 8px}
   .copybtn{position:absolute;top:16px;right:16px;background:#a78bfa;color:#15101f;border:none;border-radius:7px;padding:6px 14px;font-weight:700;font-size:.82rem;cursor:pointer;font-family:inherit}.copybtn:active{background:#34d399}
   .intro{background:#12100a;border:1px solid #2c2410;border-radius:12px;padding:20px 22px;margin:24px 0;color:#bcc3cb}.intro b{color:#f5a623}
+  .method{background:#0e0e16;border:1px solid #232330;border-radius:12px;padding:18px 22px;margin:14px 0}
+  .method h4{color:#a78bfa;font-size:1rem;margin-bottom:6px}.method p{color:#bcc3cb;font-size:.92rem;margin:0}
+  .buybox{background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:36px 28px;text-align:center;margin:44px 0}
+  .buybox h2{color:#fff;margin:0 0 8px;font-size:1.5rem}
+  .buybox .price{font-size:2.3rem;font-weight:800;color:#f5a623;margin:12px 0}
+  .buybtn{display:inline-block;padding:16px 38px;background:#a78bfa;color:#15101f;font-weight:800;border-radius:10px;font-size:1.05rem;text-decoration:none;transition:transform .12s}.buybtn:hover{transform:translateY(-1px)}
   footer{margin-top:54px;padding-top:26px;border-top:1px solid #1e1e22;color:#5b636d;font-size:.85rem;text-align:center}footer a{color:#f5a623}
 </style>
 </head>
 <body>
+<nav>
+  <a class="brand" href="/">The Trades <span>Guy</span></a>
+  <div class="links"><a href="/store.html">Store</a><a href="/coaching.html">Coaching</a><a href="/repurpose/">Tool</a></div>
+</nav>
 <header>
 <div class="container">
   <h1>🎯 The Objection Handling Swipe File</h1>
-  <p class="subtitle">The exact words that turned "no" into "yes" across 50,000+ jobs. Every objection you'll hear, and the script that flips it. Tap "Copy" to grab any line and paste it into your own sales conversations.</p>
+  <p class="subtitle">50+ objections and the exact word-for-word rebuttals that turned "no" into "yes" across 50,000+ jobs. Built on the methods of Dave Yoho, Zig Ziglar, Tom Hopkins, Grant Cardone, and Chris Voss — battle-tested on real customers. Tap "Copy" on any line.</p>
 </div>
 </header>
 <div class="container">
 
-<div class="intro"><b>How to use this:</b> Don't memorize word-for-word. Understand the <em>psychology</em> behind each response — then adapt it to your voice and your trade. Every "Why it works" tells you the principle so you can improvise when a new objection comes up.</div>
+<div class="intro"><b>How to use this:</b> Don't memorize word-for-word. Learn the <em>method</em> behind each one — then make it your own. Each card names the closing legend the technique comes from so you understand <em>why</em> it works and can improvise when a new objection hits.</div>
+
+<h2>The Master Methods</h2>
+<p class="sec-note">Five frameworks that handle 90% of every objection you'll ever hear.</p>
+<div class="method"><h4>Dave Yoho — "Reduce to the Ridiculous"</h4><p>Break the price into a daily or per-use cost so it feels trivial. The pioneer of in-home home-improvement selling built an empire on this. A $365 job is "a dollar a day to protect your biggest investment."</p></div>
+<div class="method"><h4>Zig Ziglar — "Feel, Felt, Found"</h4><p>Validate the emotion, relate with a past customer, then redirect to the discovery. Disarms defensiveness instantly.</p></div>
+<div class="method"><h4>Tom Hopkins — "The Porcupine" (answer a question with a question)</h4><p>When they ask for something, toss it back as a closing question. "Can you come Thursday?" → "If I can do Thursday, are you ready to book?"</p></div>
+<div class="method"><h4>Grant Cardone — "Agree, then Close"</h4><p>Never argue. Agree with the objection, then immediately pivot to the close. Removes the fight entirely.</p></div>
+<div class="method"><h4>Chris Voss — "The Calibrated Question" & Labeling</h4><p>From the FBI hostage negotiator. Use "How" and "What" questions to make them solve it for you. Label their fear: "It sounds like you've been burned before."</p></div>
 
 <h2>Price Objections</h2>
-<p class="sec-note">The most common objection — and the easiest to flip when you know how.</p>
+<p class="sec-note">The most common objection — and the easiest to flip with the right method.</p>
 
-<div class="card"><div class="objection">"That's too expensive" / "The other guy is cheaper"</div><div class="copytext">"I hear you. The other guys might be cheaper — but we're the highest-rated crew in the area for a reason. We don't leave until it's right, and if we find a problem, we flag it before it becomes a $4,000 repair. Is $149 worth knowing your roofline is clear?"</div><div class="why"><b>Why it works:</b> Acknowledge without arguing. Reframe price as insurance against bigger cost. End with a question that makes THEM do the math.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"That's too expensive"</div><div class="copytext">"I hear you — and honestly, it's $149 because we don't cut corners. Break it down: that's about a dollar a day for the year to keep your foundation dry and your roofline clear. One missed leak runs $4,000. Worth a dollar a day?"</div><div class="why"><b>Why it works:</b> Acknowledge, then reduce to the ridiculous. A dollar a day feels like nothing next to a $4,000 repair.</div><div class="guru">Dave Yoho — Reduce to the Ridiculous</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">"Can you do it for less?" / "Any discounts?"</div><div class="copytext">"I hear you on the price. Here's what I can do — I'll add a free 20-point inspection on top of the clean so you know the full picture. That normally costs $49 extra. You're getting more value, not a lower price."</div><div class="why"><b>Why it works:</b> Never discount — ADD value instead. Protects your price, makes them feel like they won, and the "free" inspection is actually a selling tool (it finds upsells).</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"The other guy is cheaper"</div><div class="copytext">"You're right, he probably is. And if cheapest were the goal, you'd call him. But you called us — the 4.9-star, 847-review crew with $2M in insurance. There's usually a reason the cheap guy is cheap. When do you want yours done?"</div><div class="why"><b>Why it works:</b> Agree, don't argue (Cardone), then reframe and close. You removed the fight and went straight to the booking.</div><div class="guru">Grant Cardone — Agree then Close</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">"I'll just do it myself"</div><div class="copytext">"Totally fair — a lot of our customers started that way. Two things they found: it takes a full Saturday and a 30-foot ladder is the #1 source of homeowner injuries. For $149, you get your weekend back and you don't end up in the ER. Your call."</div><div class="why"><b>Why it works:</b> Respect their capability (don't insult them). Then stack the hidden costs: time + risk. End with "your call" — no pressure, but they're now weighing a Saturday and an ER visit vs. $149.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"Any discount? Can you do it for less?"</div><div class="copytext">"Here's what I can do — instead of dropping the price, I'll add the full 20-point inspection, normally $49, free. You get more value, not a cheaper job. Sound fair?"</div><div class="why"><b>Why it works:</b> Never discount — add value. Protects your number, makes them feel like they won, and the free inspection finds upsells.</div><div class="guru">The Trades Guy — Add, Don't Subtract</div><button class="copybtn">Copy</button></div>
 
-<h2>Timing Objections</h2>
-<p class="sec-note">"Not right now" is the polite version of "no" — unless you know how to reframe urgency.</p>
+<div class="card"><div class="objection">"I can't afford that right now"</div><div class="copytext">"I get it — money's tight for everyone. Let me ask you this: what's it going to cost if that leak keeps going through the winter? The clean is $149 now. The fascia replacement is $4,000 in spring. Which is the expensive option?"</div><div class="why"><b>Why it works:</b> Calibrated question (Voss) — makes THEM do the cost-of-inaction math out loud.</div><div class="guru">Chris Voss — Calibrated Question</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">"I need to think about it"</div><div class="copytext">"Totally fair. What specifically do you want to think through? If it's the timing, I can hold the spot for 24 hours. If it's the price, I can walk through exactly what's included. What's your biggest hesitation?"</div><div class="why"><b>Why it works:</b> "I need to think about it" is NEVER the real objection. It's a polite cover for something else — usually price or trust. Find the real objection and address it.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"I'll just do it myself"</div><div class="copytext">"A lot of my customers started there. Two things they found: it eats a full Saturday, and a 30-foot ladder is the #1 cause of homeowner ER visits. For $149 you keep your weekend and your collarbone. Your call."</div><div class="why"><b>Why it works:</b> Feel-felt-found, then stack the hidden costs (time + risk). End with "your call" — zero pressure, but the math changed.</div><div class="guru">Zig Ziglar — Feel, Felt, Found</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">"Not right now" / "Maybe later"</div><div class="copytext">"No problem at all. Quick heads-up though — we're booking about two weeks out right now, and once the fall rush hits, it goes to three or four. If you want a spot before that, I'd grab it now. Otherwise, I'll follow up in a few weeks."</div><div class="why"><b>Why it works:</b> Real scarcity, not fake. The seasonal rush is real. Plant the timeline so they understand "later" has a cost — without being pushy.</div><button class="copybtn">Copy</button></div>
+<h2>Timing & Stall Objections</h2>
+<p class="sec-note">"Not now" is the polite "no" — until you reframe the cost of waiting.</p>
 
-<div class="card"><div class="objection">"I'm getting other quotes first"</div><div class="copytext">"Smart — you should always compare. Here's what I'd ask the other guys: are they insured? Do they have reviews you can check? And do they guarantee the work? We're 4.9 stars across 847 reviews and we carry $2M in insurance. When you're ready, I'll have a spot."</div><div class="why"><b>Why it works:</b> You just set the evaluation criteria. They'll now measure every competitor against YOUR standards. And you left the door open without being needy.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"I need to think about it"</div><div class="copytext">"Totally fair. When you say you want to think about it — what specifically is on your mind? Is it the price, the timing, or whether we're the right crew? Let's knock that out right now."</div><div class="why"><b>Why it works:</b> "Think about it" is never the real objection. The calibrated "what specifically" surfaces the truth so you can handle it.</div><div class="guru">Chris Voss — Surface the Real Objection</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="objection">"Call me back later"</div><div class="copytext">"Happy to. Quick though — we book two weeks out and the fall rush pushes it to four. Want me to hold a tentative spot now so you're not stuck waiting? You can cancel anytime, no charge."</div><div class="why"><b>Why it works:</b> Real urgency + a no-risk yes. A tentative hold is easy to agree to and creates cancellation friction.</div><div class="guru">The Trades Guy — Tentative Hold</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="objection">"I'm getting other quotes"</div><div class="copytext">"Smart — always compare. Here's what I'd ask them: Are you insured? Can I read your reviews? Do you guarantee the work? We're 4.9 stars, 847 reviews, $2M insured. Hold those three questions up to everyone. When you're ready, I'll have a spot."</div><div class="why"><b>Why it works:</b> You set the evaluation criteria. Every competitor now gets measured against YOUR standards.</div><div class="guru">Tom Hopkins — Set the Criteria</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="objection">"Maybe next season"</div><div class="copytext">"That works too. Just so you know — gutters that sit full through winter freeze, expand, and pull off the fascia. Spring repair runs four figures. Doing it now is the cheap version. Want me to grab a fall slot before they fill?"</div><div class="why"><b>Why it works:</b> Cost-of-delay framing plus real seasonal urgency. "Now is the cheap version" reframes waiting as the expensive choice.</div><div class="guru">Dave Yoho — Cost of Delay</div><button class="copybtn">Copy</button></div>
+
+<h2>Authority / Spouse Objections</h2>
+<p class="sec-note">The classic in-home stall — never leave empty-handed.</p>
+
+<div class="card"><div class="objection">"I need to check with my spouse"</div><div class="copytext">"Of course — it's a joint call. Let me give you both everything so you're on the same page tonight. I'll text the quote and a couple photos of the work. Quick question: what do you think their first concern will be?"</div><div class="why"><b>Why it works:</b> Respect the dynamic, arm them to sell internally, then a calibrated question that reveals the hidden objection.</div><div class="guru">Voss + Yoho — Arm the Champion</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="objection">"I have to talk to my husband/wife first" (both home)</div><div class="copytext">"Perfect, you're both here — that's the easiest way to do it. Let me show you both what I found on the roofline so nobody's making the decision blind. Takes two minutes."</div><div class="why"><b>Why it works:</b> The Yoho rule of in-home selling: never present to one decision-maker if both are home. Get them in the room together.</div><div class="guru">Dave Yoho — Both Decision-Makers Present</div><button class="copybtn">Copy</button></div>
 
 <h2>Trust Objections</h2>
-<p class="sec-note">When they don't know you yet — these build credibility fast.</p>
+<p class="sec-note">When they don't know you yet — build credibility fast.</p>
 
-<div class="card"><div class="objection">"How do I know you're any good?"</div><div class="copytext">"Fair question. We've got 847 Google reviews at 4.9 stars — you can read them yourself. I've been doing this for 15 years, we carry $2M in insurance, and if you're not happy, you don't pay. That's the deal."</div><div class="why"><b>Why it works:</b> Specific numbers (847, 4.9, 15 years, $2M) are more credible than "we're great." And the guarantee removes the last bit of risk.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"How do I know you're any good?"</div><div class="copytext">"Fair question — you should ask it. 847 Google reviews at 4.9 stars, you can read them right now. 15 years in business, $2M insured, and if you're not happy you don't pay. That's the deal."</div><div class="why"><b>Why it works:</b> Specific numbers beat adjectives. The guarantee removes the last sliver of risk.</div><div class="guru">Tom Hopkins — Proof + Risk Reversal</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">"I've been burned by contractors before"</div><div class="copytext">"I hear that a lot, and honestly, it's why I built the business the way I did. We text you a confirmation before we arrive. We photo-document everything before and after. We don't leave until you walk it with us and sign off. And if anything goes wrong, my cell is 856-874-6640 — not a call center, not a voicemail. Me."</div><div class="why"><b>Why it works:</b> You just addressed every reason they've been burned in the past: no-shows, hidden damage, no accountability. Specificity is credibility.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">"I've been burned by contractors before"</div><div class="copytext">"It sounds like someone really let you down before — and that's exactly why I run things the way I do. We text a confirmation before we arrive, photo everything before and after, and you walk the job with me before you pay. My cell is 856-874-6640 — me, not a call center."</div><div class="why"><b>Why it works:</b> Voss labeling ("it sounds like...") disarms the fear, then you address every reason they got burned.</div><div class="guru">Chris Voss — Labeling the Fear</div><button class="copybtn">Copy</button></div>
 
-<h2>Closing the Phone Call</h2>
-<p class="sec-note">These are the final moves — turning "interested" into "booked."</p>
+<h2>The Closes</h2>
+<p class="sec-note">The final moves — turning "interested" into "booked."</p>
 
-<div class="card"><div class="objection">The assumptive close (use on every call)</div><div class="copytext">"I've got tomorrow 9–11 or Thursday 1–3. Which works better for you?"</div><div class="why"><b>Why it works:</b> Never ask "would you like to book?" — that's a question they can say no to. Instead, give two options. They're choosing between slots, not between booking and not booking.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">The Assumptive Close</div><div class="copytext">"I've got tomorrow 9–11 or Thursday 1–3. Which works better for you?"</div><div class="why"><b>Why it works:</b> Never ask "would you like to book?" Give two yeses. They choose a slot, not whether to buy.</div><div class="guru">Tom Hopkins — Alternate of Choice</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">The calendar close (when they hesitate)</div><div class="copytext">"No problem — I'll pencil you in for tomorrow at 10 and text you the confirmation. If anything changes, just text me back. No commitment."</div><div class="why"><b>Why it works:</b> Now they have to actively CANCEL instead of passively say yes. Cancellation friction is stronger than booking friction.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">The Sharp-Angle Close</div><div class="copytext"><b>Them:</b> "Can you throw in the downspouts?" — <b>You:</b> "I can — if we book it right now for tomorrow. Deal?"</div><div class="why"><b>Why it works:</b> Trade the concession for the commitment. The yes is built into their own request.</div><div class="guru">Grant Cardone — Sharp Angle</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">The social proof close (when they're on the fence)</div><div class="copytext">"We're the 4.9-star, 847-review crew in the area. We just did the house on [nearby street] last week — if you want, I can send you some photos of the work."</div><div class="why"><b>Why it works:</b> Social proof + locality. "Your neighbor on [street]" makes it real and immediate. Photos prove it.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">The Takeaway Close</div><div class="copytext">"Honestly, this might not be for you — we only take jobs we can do right and we're booked tight. But if you're serious, I can probably squeeze you in this week."</div><div class="why"><b>Why it works:</b> Scarcity of YOU. People want what they might not get to have.</div><div class="guru">Jordan Belfort — The Takeaway</div><button class="copybtn">Copy</button></div>
+
+<div class="card"><div class="objection">The Summary Close</div><div class="copytext">"So that's the full clean, the 20-point inspection, the downspout flush, before-and-after photos, and the no-leak guarantee — all $149. Want me to lock it in?"</div><div class="why"><b>Why it works:</b> Stacking the value right before the ask makes the price feel small against everything they're getting.</div><div class="guru">Zig Ziglar — Summary of Value</div><button class="copybtn">Copy</button></div>
 
 <h2>Post-Sale Closes</h2>
-<p class="sec-note">Closing doesn't stop when the job is done. The best revenue comes AFTER the sale.</p>
+<p class="sec-note">Closing doesn't stop at the sale. The best revenue comes after.</p>
 
-<div class="card"><div class="objection">The review ask (do this on every job)</div><div class="copytext">"Glad you're happy with it! The biggest thing that helps a small business like mine is a quick Google review — I'll text you the link right now if that's alright?"</div><div class="why"><b>Why it works:</b> Ask at peak happiness, be honest about why, and remove friction by offering to send the link immediately. 40%+ conversion rate when done right.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">The Review Ask</div><div class="copytext">"Glad you're happy with it! The single biggest help for a small business like mine is a quick Google review — want me to text you the link right now while it's fresh?"</div><div class="why"><b>Why it works:</b> Ask at peak happiness, be honest about why, remove all friction. 40%+ conversion.</div><div class="guru">The Trades Guy — Peak-Happiness Ask</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">The referral close (after a 5-star review)</div><div class="copytext">"Thanks for the review — that means a lot. Quick question: do you know any neighbors or friends who might need their gutters done? If you send them our way, I'll give you $25 off your next clean."</div><div class="why"><b>Why it works:</b> The best time to ask for a referral is RIGHT AFTER they've publicly endorsed you. They're already in "promoter" mode. The $25 is a thank-you, not a bribe.</div><button class="copybtn">Copy</button></div>
+<div class="card"><div class="objection">The Referral Close</div><div class="copytext">"Thanks for the review — means a lot. Quick one: know any neighbors who could use their gutters done? Send them my way and I'll knock $25 off your next clean."</div><div class="why"><b>Why it works:</b> Ask right after they've publicly endorsed you. They're already in promoter mode.</div><div class="guru">The Trades Guy — Endorsement Window</div><button class="copybtn">Copy</button></div>
 
-<div class="card"><div class="objection">The seasonal re-book (annual outreach)</div><div class="copytext">"Hey [name], it's been about a year since we cleaned your gutters. Fall is coming — want me to get you on the schedule before the rush? Reply C to confirm."</div><div class="why"><b>Why it works:</b> Personal, timely, and assumes they want to rebook (not "are you interested?"). "Reply C" makes it one-tap easy.</div><button class="copybtn">Copy</button></div>
-
-
-<div style="background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:36px 28px;text-align:center;margin:40px 0">
-<h2 style="font-size:1.5rem;color:#fff;margin:0 0 8px">Get The Objection Handling Swipe File</h2>
-<p style="color:#9aa3ad;margin-bottom:20px">Every objection you'll hear, and the exact words that flip it. Tap Copy on any line.</p>
-<div style="font-size:2.2rem;font-weight:800;color:#f5a623;margin-bottom:20px">$29</div>
-<a href="https://buy.stripe.com/8x214p41YbEf22lguO0gw0d" style="display:inline-block;padding:16px 36px;background:#a78bfa;color:#15101f;font-weight:800;border-radius:10px;font-size:1.05rem;text-decoration:none;transition:transform .12s">Buy Now — $29</a>
+<div class="buybox">
+<h2>Get The Objection Handling Swipe File</h2>
+<p>50+ objections, every rebuttal, every closing legend's method. Tap to copy. Yours for life.</p>
+<div class="price">$29</div>
+<a class="buybtn" href="https://buy.stripe.com/8x214p41YbEf22lguO0gw0d">Buy Now — $29</a>
 <p style="color:#666;font-size:.82rem;margin-top:12px">Instant access · Lifetime updates · 30-day money-back guarantee</p>
 </div>
 
 <footer>
-© 2026 The Trades Guy. Yours for life — copy, adapt, and close with confidence. <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
+© 2026 The Trades Guy · <a href="/store.html">Back to store</a> · <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
 </footer>
 </div>
 <script>

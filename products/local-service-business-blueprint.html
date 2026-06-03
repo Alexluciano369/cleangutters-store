@@ -6,213 +6,285 @@
 <title>The Closing Playbook — The Trades Guy</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.75;padding:0 0 80px}
-  .container{max-width:740px;margin:0 auto;padding:0 22px}
-  header{background:linear-gradient(160deg,#161009,#0a0a0a);border-bottom:1px solid #221a0c;padding:48px 22px 40px}
-  h1{font-size:2.3rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#d8dde2;line-height:1.75}
+  a{color:inherit}
+  nav{display:flex;align-items:center;gap:24px;padding:16px 24px;border-bottom:1px solid #1e1e22;position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);z-index:50}
+  nav .brand{font-weight:800;font-size:1.05rem;text-decoration:none;letter-spacing:-.02em}nav .brand span{color:#f5a623}
+  nav .links{margin-left:auto;display:flex;gap:20px}nav .links a{color:#9aa3ad;font-size:.9rem;font-weight:600;text-decoration:none}nav .links a:hover{color:#fff}
+  .container{max-width:760px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(160deg,#161009,#0a0a0a);border-bottom:1px solid #221a0c;padding:50px 22px 42px}
+  h1{font-size:2.4rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
   .subtitle{color:#9aa3ad;font-size:1.08rem;margin-bottom:24px;max-width:620px}
   .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
   .stat{background:#111;border:1px solid #222;border-radius:10px;padding:10px 16px;text-align:center}
   .stat-num{font-size:1.25rem;font-weight:800;color:#f5a623;display:block}
   .stat-label{font-size:.72rem;color:#666}
-  h2{font-size:1.55rem;font-weight:800;color:#fff;margin:52px 0 8px;letter-spacing:-.01em}
-  h2 .ch{color:#f5a623;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
-  h3{font-size:1.12rem;font-weight:700;margin:28px 0 10px;color:#f5a623}
+  h2{font-size:1.55rem;font-weight:800;color:#fff;margin:54px 0 8px;letter-spacing:-.01em}
+  h2 .ch{color:#f5a623;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
+  h3{font-size:1.14rem;font-weight:700;margin:28px 0 10px;color:#f5a623}
+  h4{font-size:1rem;font-weight:700;color:#eef1f4;margin:20px 0 6px}
   p{margin-bottom:15px;color:#bcc3cb}
   ul,ol{margin:10px 0 18px 22px}li{margin-bottom:9px;color:#bcc3cb}li strong{color:#eef1f4}
   .quote{border-left:3px solid #f5a623;padding:16px 22px;margin:26px 0;background:#100c05;border-radius:0 10px 10px 0;font-style:italic;color:#d8dde2}
   .box{background:#12100a;border:1px solid #2c2410;border-radius:12px;padding:22px 24px;margin:24px 0}.box h3{margin-top:0}
-  .box.win{background:#0c140d;border-color:#16331a}.box.win h3{color:#34d399}
-  .box.warn{background:#160d0d;border-color:#3a1a1a}.box.warn h3{color:#f87171}
-  .script{background:#0d0d0f;border:1px solid #222;border-radius:10px;padding:16px 18px;margin:14px 0;font-family:'SF Mono',Menlo,monospace;font-size:.88rem;color:#c9d1d9;white-space:pre-wrap;line-height:1.6}
-  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.92rem}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #222}th{color:#f5a623;font-weight:700}td{color:#bcc3cb}
-  .toc{background:#0e0e10;border:1px solid #1e1e22;border-radius:12px;padding:22px 24px;margin:28px 0}
-  .toc a{color:#bcc3cb;text-decoration:none;display:block;padding:5px 0;border-bottom:1px solid #161618}.toc a:hover{color:#f5a623}.toc a:last-child{border:none}
-  .divider{height:1px;background:linear-gradient(90deg,transparent,#222,transparent);margin:48px 0}
+  .box.win{background:#0c140d;border-color:#16331a}.box.win h3,.box.win h4{color:#34d399}
+  .box.warn{background:#160d0d;border-color:#3a1a1a}.box.warn h3,.box.warn h4{color:#f87171}
+  .script{background:#0d0d0f;border:1px solid #222;border-left:3px solid #f5a623;border-radius:8px;padding:15px 18px;margin:12px 0;font-size:.94rem;color:#dbe2ea;font-style:italic}
+  .script .lbl{display:block;font-style:normal;font-size:.7rem;font-weight:700;color:#f5a623;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.9rem}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #222}th{color:#f5a623;font-weight:700}td{color:#bcc3cb}
+  .toc{background:#0e0e10;border:1px solid #1e1e22;border-radius:12px;padding:24px 26px;margin:28px 0}
+  .toc strong{color:#fff;display:block;margin-bottom:12px;font-size:1.05rem}
+  .toc a{color:#bcc3cb;text-decoration:none;display:block;padding:6px 0;border-bottom:1px solid #161618;font-size:.95rem}.toc a:hover{color:#f5a623}.toc a:last-child{border:none}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#222,transparent);margin:50px 0}
+  .buybox{background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:38px 28px;text-align:center;margin:46px 0}
+  .buybox h2{margin:0 0 8px;font-size:1.5rem}
+  .buybox .price{font-size:2.4rem;font-weight:800;color:#f5a623;margin:14px 0}
+  .buybtn{display:inline-block;padding:16px 40px;background:#f5a623;color:#1a1205;font-weight:800;border-radius:10px;font-size:1.05rem;text-decoration:none;transition:transform .12s}.buybtn:hover{transform:translateY(-1px)}
   footer{margin-top:60px;padding-top:28px;border-top:1px solid #1e1e22;color:#5b636d;font-size:.85rem;text-align:center}footer a{color:#f5a623}
 </style>
 </head>
 <body>
+<nav>
+  <a class="brand" href="/">The Trades <span>Guy</span></a>
+  <div class="links"><a href="/store.html">Store</a><a href="/coaching.html">Coaching</a><a href="/repurpose/">Tool</a></div>
+</nav>
 <header>
 <div class="container">
   <h1>📞 The Closing Playbook</h1>
-  <p class="subtitle">I closed 50,000+ jobs over 15 years — not with marketing funnels or paid ads, but by answering the phone and saying the right thing at the right time. These are the exact scripts, psychology, and systems that made that happen.</p>
+  <p class="subtitle">The complete sales-closing system. In-home closing, telemarketing, the 12 closing techniques, 50+ objection rebuttals, and the pricing psychology that took me from a $89 one-truck operation to a four-state business. Every word was used on a real customer for real money.</p>
   <div class="stats">
-    <div class="stat"><span class="stat-num">50,000+</span><span class="stat-label">Jobs closed</span></div>
+    <div class="stat"><span class="stat-num">50,000+</span><span class="stat-label">Deals closed</span></div>
     <div class="stat"><span class="stat-num">60%</span><span class="stat-label">Phone close rate</span></div>
-    <div class="stat"><span class="stat-num">$149</span><span class="stat-label">Avg ticket (from $89)</span></div>
-    <div class="stat"><span class="stat-num">847</span><span class="stat-label">Reviews earned</span></div>
+    <div class="stat"><span class="stat-num">12</span><span class="stat-label">Closing techniques</span></div>
+    <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Rebuttals</span></div>
   </div>
 </div>
 </header>
 <div class="container">
 
-<div class="quote">Most businesses don't fail because of bad marketing. They fail because they can't close. They answer the phone and hope the customer books. They give a quote and hope the customer says yes. They do a great job and hope the customer comes back. Hope is not a strategy. Closing is.<br><br>— Alex, The Trades Guy</div>
+<div class="quote">Most businesses don't fail from bad marketing. They fail because they can't close. They answer the phone and <em>hope</em> the customer books. They give a quote and <em>hope</em> the customer says yes. Hope is not a strategy. Closing is a skill — and like any skill, it's learnable, repeatable, and trainable. This playbook is the entire system.<br><br>— Alex, The Trades Guy</div>
 
 <div class="toc">
-<strong style="color:#fff;display:block;margin-bottom:10px">What's inside</strong>
-<a href="#ch1">Chapter 1 — The One-Call Close: How I Book 60% of Inbound Calls</a>
-<a href="#ch2">Chapter 2 — Price Anchoring: Why I Charge $149 and Never Discount</a>
-<a href="#ch3">Chapter 3 — The Objection Playbook: Every "No" and How to Flip It</a>
-<a href="#ch4">Chapter 4 — The Assumptive Close: Booking Without Asking Permission</a>
-<a href="#ch5">Chapter 5 — Door-to-Door Closing: Getting the Yes Face-to-Face</a>
-<a href="#ch6">Chapter 6 — The Follow-Up Close: Recovering "I'll Think About It"</a>
-<a href="#ch7">Chapter 7 — Closing the Repeat: Why Retention Beats New Sales</a>
-<a href="#ch8">Chapter 8 — Training Your Crew to Close (So You Can Stop Doing It)</a>
+<strong>The complete system — 10 parts</strong>
+<a href="#p1">Part 1 — The Closer's Mindset: Why You Stop Apologizing for Your Price</a>
+<a href="#p2">Part 2 — The 12 Closing Techniques (with exact wording)</a>
+<a href="#p3">Part 3 — Telemarketing & Inbound Phone Closing</a>
+<a href="#p4">Part 4 — In-Home / Face-to-Face Closing</a>
+<a href="#p5">Part 5 — Price Anchoring & the 3-Tier Model</a>
+<a href="#p6">Part 6 — The Complete Objection & Rebuttal Library</a>
+<a href="#p7">Part 7 — The Follow-Up Close: Recovering the "Maybe"</a>
+<a href="#p8">Part 8 — Closing the Repeat: Reviews, Referrals & Rebooks</a>
+<a href="#p9">Part 9 — Training Your Crew to Close</a>
+<a href="#p10">Part 10 — The Daily Close-Rate System</a>
 </div>
 
-<h2 id="ch1"><span class="ch">Chapter 1</span>The One-Call Close: How I Book 60% of Inbound Calls</h2>
-<p>78% of service business jobs go to the company that answers the phone first. Not the cheapest. Not the best. The <em>first</em>. I tracked this for years. The math is brutal: if you're not answering on the first ring, you're already losing.</p>
-<p>But answering fast is only half the game. The other half is closing on that first call — turning a "just getting a quote" into a "yes, come out tomorrow."</p>
-
-<h3>The script that closed 60%+ of calls</h3>
-<div class="script">"Thanks for calling, this is Alex. … Got it — overflowing gutters on a two-story in Cherry Hill. I can have someone out tomorrow morning. It's $149 for a full clean and we'll flag anything that needs repair before it gets worse. Want me to lock that in? … Great — what's the best number to text you the confirmation?"</div>
-
-<p>Notice every word is doing work:</p>
+<h2 id="p1"><span class="ch">Part 1</span>The Closer's Mindset</h2>
+<p>Before a single script matters, you have to fix the thing in your own head: <strong>you are not bothering the customer. You are helping them solve a problem they already have.</strong> They called you, or they let you knock, because something is wrong. Your price isn't an imposition — it's the cost of fixing it.</p>
+<p>The amateur apologizes for the price. The closer states it like a fact, because it is one. The moment you flinch on your own number, the customer feels it and starts negotiating. The moment you say it calmly and move on, they accept it as reality.</p>
+<div class="box win"><h4>The three beliefs every closer holds</h4>
 <ul>
-<li><strong>"This is Alex"</strong> — personal, not a call center. Immediate trust.</li>
-<li><strong>Repeat their problem back</strong> — shows you listened, not just taking notes.</li>
-<li><strong>"Tomorrow morning"</strong> — specific time, not "sometime this week." Urgency without pressure.</li>
-<li><strong>State the price</strong> — don't make them ask. Hiding the price kills the momentum.</li>
-<li><strong>"Lock that in"</strong> — assumes the sale. Doesn't ask "would you like to book?" That's a question they can say no to.</li>
-<li><strong>End with the next step</strong> — the confirmation text. You're already doing the job in their mind.</li>
-</ul>
-
-<div class="box warn"><h3>What NOT to say</h3>
-<ul>
-<li>❌ "Would you like to schedule an appointment?" — too formal, opens the door to "let me think about it."</li>
-<li>❌ "I'll have to check my schedule" — kills urgency. You're not a doctor's office.</li>
-<li>❌ "Our prices start at..." — vague pricing invites shopping around.</li>
-<li>❌ "Is this a good time to talk?" — you just answered their call. Of course it is.</li>
+<li><strong>I'm the best option, not the cheapest.</strong> Cheap customers are the worst customers. You don't want them.</li>
+<li><strong>"No" is information, not rejection.</strong> Every objection tells you what to address next.</li>
+<li><strong>The sale is made on my terms or not at all.</strong> Desperation kills more deals than price ever will.</li>
 </ul></div>
 
 <div class="divider"></div>
 
-<h2 id="ch2"><span class="ch">Chapter 2</span>Price Anchoring: Why I Charge $149 and Never Discount</h2>
-<p>The biggest closing mistake in trades businesses is <strong>competing on price.</strong> The cheapest contractor always loses — because the cheapest contractor always has the worst margins, the worst customers, and the worst reviews.</p>
+<h2 id="p2"><span class="ch">Part 2</span>The 12 Closing Techniques</h2>
+<p>These are the actual closes I used across 50,000+ jobs. Each one fits a different moment. Master all twelve and you'll always have the right move ready.</p>
 
-<h3>How I moved from $89 to $149 without losing customers</h3>
-<p>I didn't raise prices all at once. I tested three tiers:</p>
-<table>
-<tr><th>Tier</th><th>Price</th><th>What's included</th><th>Pick rate</th></tr>
-<tr><td>Basic clean</td><td>$149</td><td>Clear gutters, bag debris, flush downspouts</td><td>30%</td></tr>
-<tr><td>Clean + inspect + minor repair</td><td>$249</td><td>Full clean + 20-point inspection + seal leaks</td><td>55%</td></tr>
-<tr><td>Full service</td><td>$399+</td><td>Clean + guards quote + roofline check + photos</td><td>15%</td></tr>
-</table>
-<p><strong>The middle tier was the play.</strong> 55% of people picked it because it felt like the smart choice — not the cheapest (risky), not the most expensive (excessive). When you give three options, people compare your options to each other instead of comparing you to competitors. That's price anchoring, and it works.</p>
+<h3>1. The Assumptive Close</h3>
+<p>Act as if the decision is already made. Don't ask <em>if</em> — ask <em>which</em>.</p>
+<div class="script"><span class="lbl">Say this</span>"I've got tomorrow 9–11 or Thursday 1–3. Which works better for you?"</div>
 
-<h3>The "never discount" rule</h3>
-<div class="quote">When someone asks for a discount, never say "sure, I'll knock $20 off." Instead say: "I hear you on the price. Here's what I can do — I'll add a free 20-point inspection on top of the clean so you know the full picture of your gutters. That normally costs $49 extra." You just protected your price AND made them feel like they won.</div>
+<h3>2. The Alternative (Either/Or) Close</h3>
+<p>Give two yeses. Both options move the sale forward; neither is "no."</p>
+<div class="script"><span class="lbl">Say this</span>"Do you want just the clean at $149, or the clean plus the full inspection at $249 so you know the whole picture?"</div>
 
-<div class="divider"></div>
+<h3>3. The Urgency Close</h3>
+<p>Real scarcity, never fake. Use the calendar, the season, or the weather.</p>
+<div class="script"><span class="lbl">Say this</span>"We're booking two weeks out right now. Once the fall rush hits it jumps to four. If you want it done before the first storm, I'd grab a slot today."</div>
 
-<h2 id="ch3"><span class="ch">Chapter 3</span>The Objection Playbook: Every "No" and How to Flip It</h2>
-<p>Over 50,000 jobs, I heard every objection in the book. Here are the ones that actually come up — and the exact words that turn them around.</p>
+<h3>4. The Takeaway Close</h3>
+<p>People want what they might not be able to have. Gently pull it back.</p>
+<div class="script"><span class="lbl">Say this</span>"Honestly, this might not even be for you — we only take jobs we can do right, and we're pretty booked. But if you're serious, I can probably fit you in this week."</div>
 
-<h3>"That's too expensive"</h3>
-<div class="script">"I hear you. The other guys might be cheaper — but we're the highest-rated crew in the area for a reason. We don't leave until it's right, and if we find a problem, we flag it before it becomes a $4,000 repair. Is $149 worth knowing your roofline is clear?"</div>
-<p><strong>Why it works:</strong> Acknowledge, don't argue. Reframe the price as insurance. End with a question that makes them do the math themselves.</p>
+<h3>5. The Summary Close</h3>
+<p>Stack everything they're getting right before the ask. Value feels bigger when it's listed.</p>
+<div class="script"><span class="lbl">Say this</span>"So that's the full clean, the 20-point inspection, the downspout flush, before-and-after photos, and our no-leak guarantee — all for $149. Want me to lock it in?"</div>
 
-<h3>"I need to think about it"</h3>
-<div class="script">"Totally fair. What specifically do you want to think through? If it's the timing, I can hold the spot for 24 hours. If it's the price, I can explain what's included so you know exactly what you're getting. What's your biggest hesitation?"</div>
-<p><strong>Why it works:</strong> "I need to think about it" is never the real objection. It's a polite way of saying something else. Your job is to find the real objection and address it directly.</p>
+<h3>6. The Question Close</h3>
+<p>Answer a question with a closing question.</p>
+<div class="script"><span class="lbl">Customer:</span>"Can you come this week?"<br><span class="lbl">You:</span>"If I can get you in Thursday, are you ready to book it?"</div>
 
-<h3>"I'm going to get a few more quotes"</h3>
-<div class="script">"Smart — you should always compare. Here's what I'd ask when you talk to the other guys: are they insured? Do they have reviews you can check? And do they guarantee the work? We're 4.9 stars across 847 reviews and we carry $2M in insurance. When you're ready, I'll have a spot."</div>
-<p><strong>Why it works:</strong> You just planted the criteria they'll use to judge everyone else. You set the bar. And you left the door open without being needy.</p>
+<h3>7. The Puppy-Dog Close</h3>
+<p>Let them experience it before they fully commit. Low-risk entry, then they're in.</p>
+<div class="script"><span class="lbl">Say this</span>"Tell you what — let me clear the front section so you can see the difference, no charge. If you like the work, we finish the rest. Fair?"</div>
 
-<h3>"Can you just do it cheaper / skip the inspection?"</h3>
-<div class="script">"I could — and I'd be cutting corners on your house. The inspection is how we catch the leak that turns into a $4,000 fascia repair. It's $149 because I'm protecting your biggest investment, not just clearing leaves."</div>
-<p><strong>Why it works:</strong> You just reframed the upsell as protection. The customer feels taken care of, not sold to.</p>
+<h3>8. The Sharp-Angle Close</h3>
+<p>When they ask for something, trade the yes for the booking.</p>
+<div class="script"><span class="lbl">Customer:</span>"Can you throw in the downspouts?"<br><span class="lbl">You:</span>"I can do that — if we book it right now for tomorrow. Deal?"</div>
 
-<div class="divider"></div>
+<h3>9. The Social-Proof Close</h3>
+<div class="script"><span class="lbl">Say this</span>"We just did the house on [their street] last week — 4.9 stars, 847 reviews. I can send you photos of that job if it helps. When do you want yours done?"</div>
 
-<h2 id="ch4"><span class="ch">Chapter 4</span>The Assumptive Close: Booking Without Asking Permission</h2>
-<p>The biggest leak in most service businesses is the <strong>soft ask</strong> — "would you like to book?" That question gives the customer permission to say no. The assumptive close removes that exit.</p>
+<h3>10. The Empathy / "Feel-Felt-Found" Close</h3>
+<p>The classic for emotional objections. Validate, relate, redirect.</p>
+<div class="script"><span class="lbl">Say this</span>"I understand how you <strong>feel</strong>. A lot of my best customers <strong>felt</strong> the same about the price at first. What they <strong>found</strong> was that one missed leak costs ten times what the inspection does. That's why it's worth it."</div>
 
-<h3>How it works</h3>
-<p>Instead of asking IF they want to book, you move forward as if they've already decided. You give them the next step, not a decision point.</p>
-<div class="script">"I've got tomorrow 9–11 or Thursday 1–3. Which works better for you?"</div>
-<p>Not "would you like to schedule?" — <strong>"which time works?"</strong> They're choosing between slots, not between booking and not booking. The decision is already made.</p>
+<h3>11. The "Now or Never" Close</h3>
+<div class="script"><span class="lbl">Say this</span>"I've got one crew finishing nearby this afternoon. If you want, I send them straight over and you save the trip-charge. After today it's a separate visit."</div>
 
-<div class="box win"><h3>The calendar close</h3><p>When they say "let me check my calendar," you say: "No problem — I'll pencil you in for tomorrow at 10 and text you the confirmation. If anything changes, just text me back. No commitment." Now they have to actively cancel instead of passively say yes. Cancellation friction > booking friction.</p></div>
-
-<div class="divider"></div>
-
-<h2 id="ch5"><span class="ch">Chapter 5</span>Door-to-Door Closing: Getting the Yes Face-to-Face</h2>
-<p>I got my first 10 customers by knocking on 40 doors. Here's the script and the psychology.</p>
-
-<h3>The opening that works</h3>
-<div class="script">"Hi, I'm Alex — I do gutter cleaning in the area. I noticed yours look like they've got some buildup. I can clear them out and check for leaks for $99. Want me to take a look while I'm here?"</div>
-<p>Key moves:</p>
-<ul>
-<li><strong>Don't pitch. Observe.</strong> "I noticed yours look like they've got buildup" — you're not selling, you're helping. You saw something specific about THEIR house.</li>
-<li><strong>Low entry price.</strong> $99 is low enough to say yes on the spot. You upsell on the ladder once they've seen you work.</li>
-<li><strong>"While I'm here"</strong> — creates urgency without pressure. You're already in the neighborhood. The marginal cost of saying yes is zero.</li>
-</ul>
-
-<h3>The on-ladder upsell</h3>
-<div class="script">"Your gutters are clear now — but I noticed a small leak at this joint. I can seal it right now for $49 or it'll get worse over the winter. Want me to handle it?"</div>
-<p>They're watching you work. They trust you. The upsell feels like a recommendation from their mechanic, not a sales pitch. That's the best time to close additional revenue.</p>
+<h3>12. The Direct Close</h3>
+<p>Sometimes the strongest move is the simplest. After you've handled the objections — just ask.</p>
+<div class="script"><span class="lbl">Say this</span>"Sounds like this is exactly what you need. Let's get you booked. What's the best number to text the confirmation to?"</div>
 
 <div class="divider"></div>
 
-<h2 id="ch6"><span class="ch">Chapter 6</span>The Follow-Up Close: Recovering "I'll Think About It"</h2>
-<p>"I'll think about it" is where most service businesses lose 40% of their pipeline. The customer was interested, said they'd get back to you, and then life happened. Your competitor who followed up first got the job.</p>
+<h2 id="p3"><span class="ch">Part 3</span>Telemarketing & Inbound Phone Closing</h2>
+<p>78% of service jobs go to whoever <em>answers first</em> — not cheapest, not best. I tracked this for years. But speed only opens the door. The script closes it.</p>
 
-<h3>The 24-hour follow-up that recovered 30% of lost leads</h3>
-<div class="script">"Hey [name], this is Alex from yesterday — hope the gutters are looking better. I had a slot open up tomorrow morning in your area. Want me to lock it in before someone else grabs it?"</div>
-<p>Why this works:</p>
-<ul>
-<li><strong>Reference the specific interaction</strong> — not a generic "just following up."</li>
-<li><strong>Create real scarcity</strong> — "slot open up" means other people are booking. Not fake urgency.</li>
-<li><strong>Offer the next step immediately</strong> — "lock it in" is better than "are you still interested?"</li>
-</ul>
-
-<div class="divider"></div>
-
-<h2 id="ch7"><span class="ch">Chapter 7</span>Closing the Repeat: Why Retention Beats New Sales</h2>
-<p>New customer acquisition costs 5–7× more than retention. The cheapest revenue you'll ever get is from someone who already trusts you. Here's how I closed the repeat customer — without being pushy.</p>
-
-<h3>The seasonal re-book nudge</h3>
-<div class="script">"Hey [name], it's been about a year since we cleaned your gutters. Fall is coming — want me to get you on the schedule before the rush? Reply C to confirm."</div>
-
-<h3>The "problem spotted" reactivation</h3>
-<div class="script">"Re: the leak we flagged at your last visit — just wanted to check if you've had it looked at. If not, we can seal it on our next visit for $49. Better now than after the first snow."</div>
-<p>This one closes at 40%+ because it references something they already know about and frames it as prevention, not upsell.</p>
-
-<h3>The referral close</h3>
-<div class="script">"Glad you're happy with the work. Quick question — do you know any neighbors or friends who might need their gutters done? If you send them our way, I'll give you $25 off your next clean."</div>
-<p>Referrals from happy customers close at 80%+ — because the trust transfers. One referral is worth ten cold leads.</p>
-
-<div class="divider"></div>
-
-<h2 id="ch8"><span class="ch">Chapter 8</span>Training Your Crew to Close (So You Can Stop Doing It)</h2>
-<p>You can't scale a business where you're the only closer. At some point, you have to train someone else to close — and that's where most owners fail. They either hire a "salesperson" who doesn't know the trade, or they hire a tradesperson who can't sell. You need both.</p>
-
-<h3>The close training checklist</h3>
+<h3>The inbound call framework (the one that closed 60%)</h3>
 <ol>
-<li><strong>Shadow you for 20 calls.</strong> They listen. They don't talk. They hear the script, the rhythm, the objections.</li>
-<li><strong>Role-play the top 5 objections.</strong> You play the customer. They practice the exact words. Until it's muscle memory.</li>
-<li><strong>Give them a pricing sheet, not pricing discretion.</strong> Crew members should never negotiate. They quote the sheet. If the customer pushes, they say "let me check with the office" and call you.</li>
-<li><strong>Tie their bonus to close rate AND reviews.</strong> If they get paid per job AND get a bonus for 5-star reviews, they'll close hard AND do great work. Those two incentives together are unstoppable.</li>
+<li><strong>Answer like a human, by name.</strong> "Thanks for calling, this is Alex."</li>
+<li><strong>Mirror the problem back.</strong> Shows you listened. "Got it — overflowing gutters on a two-story."</li>
+<li><strong>Give a specific time + the price together.</strong> "I can have someone out tomorrow morning, it's $149 for a full clean."</li>
+<li><strong>Assume the booking.</strong> "Want me to lock that in?"</li>
+<li><strong>End on the next step.</strong> "Great — best number to text the confirmation?"</li>
 </ol>
 
-<div class="quote">The best closer in my business wasn't me — it was a guy I trained from scratch who had never sold anything in his life. He just learned the scripts, believed in the product, and followed the system. Closing is a skill. It's trainable. That's what this playbook is for.<br><br>— Alex</div>
+<h3>The outbound / telemarketing cold script</h3>
+<div class="script"><span class="lbl">Opener</span>"Hi, is this [name]? This is Alex with The Trades Guy — we're doing gutter cleanings in [neighborhood] this week and I had one slot left. Quick question: when's the last time yours were cleaned out?"</div>
+<p><strong>Why it works:</strong> Local + scarce + a question that makes them think about the problem. You're not pitching, you're diagnosing.</p>
 
+<div class="box"><h4>The telemarketing rules that keep you out of the "no" pile</h4>
+<ul>
+<li><strong>Never ask "how are you today?"</strong> — it screams sales call. Get to value in 7 seconds.</li>
+<li><strong>Earn the next 30 seconds with a question, not a pitch.</strong></li>
+<li><strong>Stand up when you call.</strong> Your voice carries more authority. This is real.</li>
+<li><strong>Smile while you talk.</strong> They can hear it. Tested it for years.</li>
+<li><strong>Talk less than the customer.</strong> The one asking questions controls the call.</li>
+</ul></div>
+
+<h3>Voicemail that gets a callback</h3>
+<div class="script"><span class="lbl">Leave this</span>"Hi [name], Alex with The Trades Guy. I had a quick question about your gutters and a slot opening in your area this week — give me a call back at 856-874-6640 when you get a sec. Thanks."</div>
+<p>Short. Specific. A reason to call back (the slot). Never dump the whole pitch into a voicemail — leave a hook.</p>
 
 <div class="divider"></div>
 
-<div style="background:#12100a;border:1px solid #2c2410;border-radius:14px;padding:36px 28px;text-align:center;margin:40px 0">
-<h2 style="font-size:1.5rem;color:#fff;margin:0 0 8px">Get The Closing Playbook</h2>
-<p style="color:#9aa3ad;margin-bottom:20px">Every script, every objection handler, every system. Yours for life.</p>
-<div style="font-size:2.2rem;font-weight:800;color:#f5a623;margin-bottom:20px">$149</div>
-<a href="https://buy.stripe.com/9B66oJ41Y37J6iB2DY0gw0b" style="display:inline-block;padding:16px 36px;background:#f5a623;color:#1a1205;font-weight:800;border-radius:10px;font-size:1.05rem;text-decoration:none;transition:transform .12s">Buy Now — $149</a>
-<p style="color:#666;font-size:.82rem;margin-top:12px">Instant access · Lifetime updates · 30-day money-back guarantee</p>
+<h2 id="p4"><span class="ch">Part 4</span>In-Home / Face-to-Face Closing</h2>
+<p>The in-home close is the highest-converting environment there is — if you run it right. You're on their turf, you have their attention, and you can read body language the phone hides. Here's the system.</p>
+
+<h3>The 5-stage in-home close</h3>
+<ol>
+<li><strong>Build rapport before business.</strong> 60 seconds on something real — the dog, the truck in the driveway, the renovation. People buy from people they like.</li>
+<li><strong>Inspect out loud.</strong> Narrate what you see. "See this joint here? That's the start of a leak." You're building the problem in their mind, with evidence.</li>
+<li><strong>Present the solution, not the price.</strong> Talk about the outcome — a dry foundation, no winter ice dams — before the number.</li>
+<li><strong>Present the price with confidence and silence.</strong> State it. Then <em>stop talking.</em> The first person to speak after the price loses.</li>
+<li><strong>Close assumptively and handle the objection.</strong> "I can have this knocked out today. Want me to grab the ladder?"</li>
+</ol>
+
+<div class="box warn"><h4>The #1 in-home mistake</h4><p>Talking after you state the price. Owners get nervous in the silence and start discounting before the customer even responds: "...but I could maybe do $20 off." You just negotiated against yourself. <strong>State the price. Then shut up.</strong> Let them fill the silence.</p></div>
+
+<h3>The on-site upsell (where the real margin lives)</h3>
+<div class="script"><span class="lbl">Say this (on the ladder)</span>"Your gutters are clear now — but I spotted a loose joint right here. I can seal it while I'm up here for $49, or it'll get worse over the winter. Want me to handle it now?"</div>
+<p>They're watching you work. You've earned trust. The upsell feels like your mechanic pointing at a worn belt — a recommendation, not a pitch. On-site upsells closed at 55%+ for me.</p>
+
+<h3>The "decision-maker" move</h3>
+<p>If a spouse "needs to check with" the other, never leave empty-handed:</p>
+<div class="script"><span class="lbl">Say this</span>"Totally get it. Let's do this — I'll pencil you in for Thursday and text you both the details. If [spouse] has any questions, they can call me directly. If Thursday doesn't work after you talk, just text me back. No commitment either way."</div>
+
+<div class="divider"></div>
+
+<h2 id="p5"><span class="ch">Part 5</span>Price Anchoring & the 3-Tier Model</h2>
+<p>The biggest closing mistake in the trades is <strong>competing on price.</strong> The cheapest contractor always loses — worst margins, worst customers, worst reviews. Stop competing on price. Compete on value, and let the customer choose the value.</p>
+
+<h3>How I moved from $89 to $149 without losing customers</h3>
+<table>
+<tr><th>Tier</th><th>Price</th><th>Includes</th><th>Pick rate</th></tr>
+<tr><td>Basic</td><td>$149</td><td>Clear gutters, bag debris, flush downspouts</td><td>30%</td></tr>
+<tr><td>Standard ⭐</td><td>$249</td><td>Basic + 20-point inspection + seal minor leaks</td><td>55%</td></tr>
+<tr><td>Premium</td><td>$399+</td><td>Standard + guard quote + roofline check + photos</td><td>15%</td></tr>
+</table>
+<p><strong>The middle tier is the play.</strong> When you give three options, the customer compares your options <em>to each other</em> instead of comparing you to competitors. Most pick the middle — it feels like the smart choice. That's price anchoring, and it raised my average ticket by 60% overnight.</p>
+
+<div class="box win"><h4>The "never discount" rule</h4><p>When someone asks for a discount, never just knock money off. <strong>Add value instead.</strong> "I hear you on price. Here's what I can do — I'll throw in the full inspection, normally $49 extra, free." You protect your number AND they feel like they won.</p></div>
+
+<div class="divider"></div>
+
+<h2 id="p6"><span class="ch">Part 6</span>The Complete Objection & Rebuttal Library</h2>
+<p>Over 50,000 jobs I heard every objection there is. Here are the most common, with the exact rebuttals. (The full standalone <a href="/products/contractor-copy-templates.html">Objection Swipe File</a> has 50+ with copy-paste buttons — these are the core ones.)</p>
+
+<h3>"That's too expensive / the other guy is cheaper"</h3>
+<div class="script">"I hear you. The other guys might be cheaper — but we're the highest-rated crew in the area for a reason. We don't leave until it's right, and if we find a problem, we flag it before it becomes a $4,000 repair. Is $149 worth knowing your roofline is clear?"</div>
+
+<h3>"I need to think about it"</h3>
+<div class="script">"Totally fair. What specifically do you want to think through? If it's timing, I can hold the spot 24 hours. If it's price, I'll walk you through exactly what's included. What's your biggest hesitation?"</div>
+<p><strong>This is never the real objection.</strong> It's a polite cover. Your job is to surface the real one and handle it.</p>
+
+<h3>"I need to check with my spouse"</h3>
+<div class="script">"Smart — it's a joint decision. Let me give you both the info so you're on the same page. I'll text the quote and a couple of photos of the work. When you talk tonight, what do you think their main question will be?"</div>
+
+<h3>"I'm getting other quotes"</h3>
+<div class="script">"You should — always compare. Here's what I'd ask the other guys: are they insured? Do they have reviews you can read? Do they guarantee the work? We're 4.9 stars across 847 reviews with $2M in coverage. When you're ready, I'll have a spot."</div>
+
+<h3>"Just call me back later / not right now"</h3>
+<div class="script">"No problem. Quick heads-up though — we book two weeks out and the fall rush pushes it to four. Want me to hold a tentative spot now so you don't get stuck waiting? You can always cancel."</div>
+
+<div class="divider"></div>
+
+<h2 id="p7"><span class="ch">Part 7</span>The Follow-Up Close</h2>
+<p>40% of pipeline dies in the "maybe." The customer was interested, said they'd get back to you, and life happened. The competitor who followed up first won. My 24-hour follow-up recovered 30% of those.</p>
+<div class="script"><span class="lbl">24-hour text</span>"Hey [name], Alex from yesterday — hope the gutters are still on your mind. A slot opened tomorrow morning in your area. Want me to lock it in before someone grabs it?"</div>
+<ul>
+<li>Reference the specific conversation, never "just following up."</li>
+<li>Real scarcity — a slot actually opened.</li>
+<li>Offer the next step, not a question they can dodge.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2 id="p8"><span class="ch">Part 8</span>Closing the Repeat</h2>
+<p>New customers cost 5–7× more than keeping one. The cheapest revenue is from someone who already trusts you. (The full <a href="/products/847-review-playbook.html">Review Engine</a> goes deep — here's the core.)</p>
+<div class="script"><span class="lbl">Review ask</span>"Glad you're happy! The single biggest help for a small business like mine is a quick Google review — want me to text you the link right now?"</div>
+<div class="script"><span class="lbl">Referral close</span>"Thanks for the review. Quick one — know any neighbors who need their gutters done? Send them my way and I'll give you $25 off your next clean."</div>
+<div class="script"><span class="lbl">Seasonal rebook</span>"Hey [name], it's been about a year. Fall's coming — want me to get you on the schedule before the rush? Reply C to confirm."</div>
+
+<div class="divider"></div>
+
+<h2 id="p9"><span class="ch">Part 9</span>Training Your Crew to Close</h2>
+<p>You can't scale a business where you're the only closer. Here's how I trained a guy who'd never sold anything in his life into my best closer.</p>
+<ol>
+<li><strong>Shadow 20 calls.</strong> Listen only. Absorb the rhythm and the objections.</li>
+<li><strong>Role-play the top 5 objections</strong> until the rebuttals are muscle memory.</li>
+<li><strong>Give a pricing sheet, not pricing discretion.</strong> Crew quotes the sheet. Push-back → "let me check with the office."</li>
+<li><strong>Tie bonus to close rate AND 5-star reviews.</strong> Those two incentives together are unstoppable.</li>
+</ol>
+
+<div class="divider"></div>
+
+<h2 id="p10"><span class="ch">Part 10</span>The Daily Close-Rate System</h2>
+<p>What gets measured gets closed. Track these every single day and your close rate climbs on its own:</p>
+<table>
+<tr><th>Metric</th><th>Why it matters</th></tr>
+<tr><td>Calls answered on first ring</td><td>Speed wins 78% of jobs</td></tr>
+<tr><td>Quotes given vs. jobs booked</td><td>Your true close rate</td></tr>
+<tr><td>Objections heard (logged)</td><td>Tells you which rebuttal to sharpen</td></tr>
+<tr><td>Follow-ups sent within 24h</td><td>Recovers 30% of "maybes"</td></tr>
+<tr><td>Reviews requested per job</td><td>Fuels the next 10 closes</td></tr>
+</table>
+<div class="quote">The best closer in my business wasn't me — it was a kid I trained from scratch who'd never sold a thing. He learned the scripts, believed in the work, and followed the system. That's the whole point: closing is a skill, not a personality. Anyone can learn it. This playbook is how.<br><br>— Alex</div>
+
+<div class="buybox">
+<h2>Get The Closing Playbook</h2>
+<p>The complete system — 12 techniques, telemarketing, in-home, 50+ rebuttals, pricing, crew training. Yours for life.</p>
+<div class="price">$149</div>
+<a class="buybtn" href="https://buy.stripe.com/9B66oJ41Y37J6iB2DY0gw0b">Buy Now — $149</a>
+<p style="color:#666;font-size:.82rem;margin-top:14px">Instant access · Lifetime updates · 30-day money-back guarantee</p>
 </div>
 
 <footer>
-© 2026 The Trades Guy. The Closing Playbook is yours for life. Questions? <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
+© 2026 The Trades Guy · <a href="/store.html">Back to store</a> · <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
 </footer>
 </div>
 </body>
