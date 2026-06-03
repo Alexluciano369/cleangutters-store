@@ -1,0 +1,1 @@
+window.RPURPOSE_API = "https://cet-compute-holdings-visitors.trycloudflare.com";
