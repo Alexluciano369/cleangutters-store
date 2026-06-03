@@ -89,12 +89,25 @@
     .flagship{grid-template-columns:1fr}.flagship .right{border-left:none;border-top:1px solid #232330}
     .grid,.testi{grid-template-columns:1fr}.hero h1{font-size:1.9rem}
   }
+
+  nav{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1e1e22;position:relative}
+  nav .brand{font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:#fff;text-decoration:none}.nav .brand span,nav .brand span{color:#f5a623}
+  nav .links{margin-left:auto;display:flex;gap:22px}
+  nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600;transition:color .15s;text-decoration:none}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}
+  .hamburger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px 8px;margin-left:auto}
+  @media(max-width:640px){
+    .hamburger{display:block}
+    nav .links{display:none;position:absolute;top:100%;left:0;right:0;background:#13151a;border-bottom:1px solid #1e1e22;flex-direction:column;padding:12px 24px;gap:14px;z-index:100}
+    nav .links.open{display:flex}
+    nav .links a{font-size:1rem;padding:4px 0}
+  }
 </style>
 <script data-goatcounter="https://tradesguy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <nav>
   <a class="brand" href="/">The Trades <span>Guy</span></a>
+  <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">☰</button>
   <div class="links">
     <a href="/store.html" class="active">Playbooks</a>
     <a href="/freebies.html">Free Samples</a>
@@ -103,6 +116,11 @@
   </div>
 </nav>
 
+<script>
+document.querySelectorAll('nav .links a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('nav .links').classList.remove('open'));
+});
+</script>
 <div class="hero">
   <div class="eyebrow">The Art of Closing</div>
   <h1>The scripts that closed 50,000 deals.</h1>
