@@ -82,11 +82,11 @@
   <div class="all-products">
     <h3>All Product Downloads</h3>
     <a class="product-link" href="/products/local-service-business-blueprint.html">
-      <span class="name">The Local Service Business Blueprint</span>
+      <span class="name">The Closing Playbook</span>
       <span class="dl">Download →</span>
     </a>
     <a class="product-link" href="/products/complete-starter-kit.html">
-      <span class="name">The Complete Starter Kit</span>
+      <span class="name">The Complete Closer's Kit</span>
       <span class="dl">Download →</span>
     </a>
     <a class="product-link" href="/products/847-review-playbook.html">
@@ -94,7 +94,7 @@
       <span class="dl">Download →</span>
     </a>
     <a class="product-link" href="/products/contractor-copy-templates.html">
-      <span class="name">Contractor Copy Templates</span>
+      <span class="name">The Objection Handling Swipe File</span>
       <span class="dl">Download →</span>
     </a>
   </div>
@@ -114,10 +114,10 @@ var params = new URLSearchParams(window.location.search);
 var product = params.get('product') || params.get('token') || '';
 
 var products = {
-  'local-service-business-blueprint': { title: 'The Local Service Business Blueprint', desc: 'Your complete blueprint for building a service business from scratch. 15 years of systems, templates, and proven frameworks.', url: '/products/local-service-business-blueprint.html' },
-  'complete-starter-kit': { title: 'The Complete Starter Kit', desc: 'All 6 products + exclusive bonuses. Everything you need to launch your service business.', url: '/products/complete-starter-kit.html' },
-  '847-review-playbook': { title: 'The 847-Review Playbook', desc: 'Step-by-step system for getting reviews and building social proof that drives sales.', url: '/products/847-review-playbook.html' },
-  'contractor-copy-templates': { title: 'Contractor Copy Templates', desc: '200+ annotated copy examples. Headlines, emails, landing pages, CTAs — deconstructed with psychological triggers.', url: '/products/contractor-copy-templates.html' }
+  'local-service-business-blueprint': { title: "The Closing Playbook", desc: 'The complete sales-closing system — 12 techniques, 50+ rebuttals, pricing psychology.', url: '/products/local-service-business-blueprint.html' },
+  'complete-starter-kit': { title: "The Complete Closer's Kit", desc: 'All 3 playbooks + 3 exclusive bonuses. $217 value for $97.', url: '/products/complete-starter-kit.html' },
+  '847-review-playbook': { title: 'The 847-Review Playbook', desc: 'Step-by-step system for getting reviews and driving sales.', url: '/products/847-review-playbook.html' },
+  'contractor-copy-templates': { title: 'The Objection Handling Swipe File', desc: '50+ objections with exact rebuttals. Tap to copy.', url: '/products/contractor-copy-templates.html' }
 };
 
 // Normalize slug aliases
@@ -126,8 +126,9 @@ var slugMap = {
   'copy-templates': 'contractor-copy-templates',
   'swipe-file': 'contractor-copy-templates',
   'blueprint': 'local-service-business-blueprint',
-  'social-growth-system': '847-review-playbook',
-  'copywriting-swipe-file': 'contractor-copy-templates'
+  'kit': 'complete-starter-kit',
+  'bots': 'complete-starter-kit',
+  'bundle': 'complete-starter-kit'
 };
 
 var slug = slugMap[product] || product;
