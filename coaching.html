@@ -11,7 +11,7 @@
   nav{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1e1e22}
   nav .brand{font-weight:800;font-size:1.1rem}.nav .brand span{color:#f5a623}
   nav .links{margin-left:auto;display:flex;gap:22px}
-  nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600}
+  nav .links a{color:#9aa3ad;font-size:.92rem;font-weight:600}nav .links a.active{color:#f5a623}nav .links a:hover{color:#fff}
   h1{font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
   h2{font-size:1.4rem;font-weight:800;color:#fff;margin:44px 0 8px}
   h3{font-size:1.08rem;font-weight:700;color:#f5a623;margin:24px 0 8px}
@@ -30,11 +30,12 @@
 </head>
 <body>
 <nav>
-  <a class="brand" href="/store.html">The Trades <span>Guy</span></a>
+  <a class="brand" href="/">The Trades <span>Guy</span></a>
   <div class="links">
     <a href="/store.html">Playbooks</a>
-    <a href="/freebies.html">Free Samples</a> <a href="/repurpose/">Repurpose Tool</a>
-    <a href="/coaching.html">Coaching</a>
+    <a href="/freebies.html">Free Samples</a>
+    <a href="/coaching.html" class="active">Coaching</a>
+    <a href="/repurpose/">Repurpose Tool</a>
   </div>
 </nav>
 <div class="container">
