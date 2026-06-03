@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmed — The Trades Guy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e5e5e5; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+  
+  /* Nav */
+  nav { display: flex; gap: 22px; padding: 14px 24px; border-bottom: 1px solid #1a1a1a; background: #0d0d0d; font-size: 0.9rem; position: sticky; top: 0; z-index: 100; align-items: center; }
+  nav a { color: #e5e5e5; text-decoration: none; }
+  nav .brand { font-weight: 800; font-size: 1rem; letter-spacing: -0.02em; margin-right: 8px; }
+  nav .accent { color: #f5a623; font-weight: 700; }
+
+  /* Content */
+  .content { flex: 1; max-width: 640px; margin: 0 auto; padding: 60px 24px; text-align: center; }
+  .checkmark { font-size: 4rem; margin-bottom: 16px; }
+  h1 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 1.05rem; margin-bottom: 40px; }
+
+  /* Download card */
+  .download-card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 32px; margin-bottom: 24px; text-align: left; }
+  .download-card h2 { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .download-card p { color: #888; font-size: 0.95rem; margin-bottom: 20px; }
+  
+  .download-btn { display: inline-flex; align-items: center; gap: 8px; background: #f5a623; color: #0a0a0a; font-weight: 700; font-size: 1rem; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+  .download-btn:hover { background: #e6951a; }
+  .download-btn svg { width: 18px; height: 18px; }
+
+  /* All products section */
+  .all-products { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 24px; margin-top: 16px; }
+  .all-products h3 { font-size: 0.9rem; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+  .product-link { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #1a1a1a; text-decoration: none; color: #e5e5e5; }
+  .product-link:last-child { border-bottom: none; }
+  .product-link:hover { color: #f5a623; }
+  .product-link .name { font-weight: 600; }
+  .product-link .dl { color: #f5a623; font-size: 0.85rem; font-weight: 600; }
+
+  /* Help */
+  .help { margin-top: 40px; padding: 20px; background: #0f1a0f; border: 1px solid #1a3a1a; border-radius: 12px; }
+  .help p { color: #4ade80; font-size: 0.9rem; }
+  .help a { color: #4ade80; }
+
+  /* Footer */
+  footer { border-top: 1px solid #1a1a1a; background: #0d0d0d; padding: 24px; text-align: center; font-size: 0.8rem; color: #555; }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .content { padding: 40px 16px; }
+    h1 { font-size: 1.6rem; }
+    .download-card { padding: 20px; }
+  }
+</style>
+<script data-goatcounter="https://tradesguy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="/store.html">The Trades Guy</a>
+  <a class="accent" href="/store.html">Store</a>
+  <a href="/store.html" style="margin-left:auto; color:#4ade80; font-weight:600;">← Back to Store</a>
+</nav>
+
+<div class="content">
+  <div class="checkmark">✅</div>
+  <h1>Order Confirmed!</h1>
+  <p class="subtitle">Your purchase is ready. Download your files below.</p>
+
+  <!-- Default: show the product that was purchased -->
+  <div class="download-card" id="purchase-card" style="display:none;">
+    <h2 id="product-title">Your Purchase</h2>
+    <p id="product-desc">Download your file below. You'll also receive a confirmation email with this link.</p>
+    <a class="download-btn" id="product-download" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Now
+    </a>
+  </div>
+
+  <!-- Always show all products as backup -->
+  <div class="all-products">
+    <h3>All Product Downloads</h3>
+    <a class="product-link" href="/products/local-service-business-blueprint.html">
+      <span class="name">The Local Service Business Blueprint</span>
+      <span class="dl">Download →</span>
+    </a>
+    <a class="product-link" href="/products/complete-starter-kit.html">
+      <span class="name">The Complete Starter Kit</span>
+      <span class="dl">Download →</span>
+    </a>
+    <a class="product-link" href="/products/847-review-playbook.html">
+      <span class="name">The 847-Review Playbook</span>
+      <span class="dl">Download →</span>
+    </a>
+    <a class="product-link" href="/products/contractor-copy-templates.html">
+      <span class="name">Contractor Copy Templates</span>
+      <span class="dl">Download →</span>
+    </a>
+  </div>
+
+  <div class="help">
+    <p>💚 <strong>Need help?</strong> Email <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a> and we'll get you sorted.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 The Trades Guy. Secure payment via Stripe · Instant delivery</p>
+</footer>
+
+<script>
+// Read ?product= param and highlight the purchased product
+var params = new URLSearchParams(window.location.search);
+var product = params.get('product') || params.get('token') || '';
+
+var products = {
+  'local-service-business-blueprint': { title: 'The Local Service Business Blueprint', desc: 'Your complete blueprint for building a service business from scratch. 15 years of systems, templates, and proven frameworks.', url: '/products/local-service-business-blueprint.html' },
+  'complete-starter-kit': { title: 'The Complete Starter Kit', desc: 'All 6 products + exclusive bonuses. Everything you need to launch your service business.', url: '/products/complete-starter-kit.html' },
+  '847-review-playbook': { title: 'The 847-Review Playbook', desc: 'Step-by-step system for getting reviews and building social proof that drives sales.', url: '/products/847-review-playbook.html' },
+  'contractor-copy-templates': { title: 'Contractor Copy Templates', desc: '200+ annotated copy examples. Headlines, emails, landing pages, CTAs — deconstructed with psychological triggers.', url: '/products/contractor-copy-templates.html' }
+};
+
+// Normalize slug aliases
+var slugMap = {
+  'review-playbook': '847-review-playbook',
+  'copy-templates': 'contractor-copy-templates',
+  'swipe-file': 'contractor-copy-templates',
+  'blueprint': 'local-service-business-blueprint',
+  'social-growth-system': '847-review-playbook',
+  'copywriting-swipe-file': 'contractor-copy-templates'
+};
+
+var slug = slugMap[product] || product;
+var info = products[slug];
+
+if (info) {
+  document.getElementById('purchase-card').style.display = 'block';
+  document.getElementById('product-title').textContent = info.title;
+  document.getElementById('product-desc').textContent = info.desc;
+  document.getElementById('product-download').href = info.url;
+}
+</script>
+
+</body>
+</html>
