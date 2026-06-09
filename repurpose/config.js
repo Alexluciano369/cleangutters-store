@@ -1,1 +1,1 @@
-window.RPURPOSE_API = "https://underground-pixel-canal-economy.trycloudflare.com";
+window.RPURPOSE_API = "https://resistant-group-pit-hosting.trycloudflare.com";

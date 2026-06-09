@@ -57,6 +57,7 @@ nav .links{margin-left:auto;display:flex;gap:22px}nav .links a{color:#9aa3ad;fon
 footer{border-top:1px solid #1e1e22;padding:28px 24px;text-align:center;color:#555;font-size:.85rem}footer a{color:#f5a623}
 </style>
 <script data-goatcounter="https://tradesguy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="/repurpose/config.js"></script>
 </head>
 <body>
 
@@ -92,7 +93,7 @@ footer{border-top:1px solid #1e1e22;padding:28px 24px;text-align:center;color:#5
         <li>Close rate tracking & accountability</li>
         <li>Full playbook access included</li>
       </ul>
-      <button class="cta" onclick="openModal('phone')">Start Phone Coaching →</button>
+      <a class="cta" href="https://buy.stripe.com/00w00l2XUbEf7mF2DY0gw0g" style="display:block;text-align:center;text-decoration:none">Start Phone Coaching →</a>
     </div>
     <div class="card">
       <div class="badge">FULL IMMERSION</div>
@@ -105,7 +106,7 @@ footer{border-top:1px solid #1e1e22;padding:28px 24px;text-align:center;color:#5
         <li>Live objection practice & roleplay</li>
         <li>Priority text response</li>
       </ul>
-      <button class="cta" onclick="openModal('video')">Start Video Coaching →</button>
+      <a class="cta" href="https://buy.stripe.com/fZu8wR2XU4bN9uN1zU0gw0h" style="display:block;text-align:center;text-decoration:none">Start Video Coaching →</a>
     </div>
   </div>
 </div>
@@ -124,67 +125,11 @@ footer{border-top:1px solid #1e1e22;padding:28px 24px;text-align:center;color:#5
   </div>
 </div>
 
-<!-- Email modal -->
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <h3 id="modal-title">Start Phone Coaching</h3>
-    <p>Enter your email. You'll be redirected to Stripe to complete payment, and I'll reach out within 24 hours to schedule your first call.</p>
-    <div class="error" id="modal-error"></div>
-    <input type="email" id="modal-email" placeholder="your@email.com" required>
-    <button class="submit" id="modal-submit" onclick="submitCoaching()">Continue to Payment →</button>
-    <button class="close" onclick="closeModal()">Cancel</button>
-  </div>
-</div>
-
 <footer>
   © 2026 The Trades Guy. Cherry Hill, NJ. <a href="mailto:support@thetradesguy.com">support@thetradesguy.com</a>
 </footer>
 
 <script>
-const API_BASE = window.RPURPOSE_API || 'https://cet-compute-holdings-visitors.trycloudflare.com';
-let selectedTier = '';
-
-function openModal(tier) {
-  selectedTier = tier;
-  document.getElementById('modal-title').textContent = tier === 'phone' ? 'Start Phone Coaching' : 'Start Video Coaching';
-  document.getElementById('modal-email').value = '';
-  document.getElementById('modal-error').style.display = 'none';
-  document.getElementById('modal').classList.add('open');
-  document.getElementById('modal-email').focus();
-}
-
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-}
-
-async function submitCoaching() {
-  const email = document.getElementById('modal-email').value.trim();
-  const err = document.getElementById('modal-error');
-  const btn = document.getElementById('modal-submit');
-  if (!email || !email.includes('@')) { err.textContent = 'Please enter a valid email.'; err.style.display = 'block'; return; }
-  err.style.display = 'none';
-  btn.disabled = true;
-  btn.textContent = 'Redirecting to Stripe...';
-  try {
-    const res = await fetch(API_BASE + '/api/coaching/checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ tier: selectedTier, email })
-    });
-    const data = await res.json();
-    if (data.url) { window.location.href = data.url; }
-    else { err.textContent = data.error || 'Something went wrong. Try again.'; err.style.display = 'block'; btn.disabled = false; btn.textContent = 'Continue to Payment →'; }
-  } catch (e) {
-    err.textContent = 'Network error. Try again.'; err.style.display = 'block';
-    btn.disabled = false; btn.textContent = 'Continue to Payment →';
-  }
-}
-
-// Close modal on overlay click
-document.getElementById('modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
-// Close on Escape
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
-
 // Show success/cancel messages
 if (location.search.includes('success=1')) {
   document.querySelector('.hero h1').textContent = "You're in. 🎉";
@@ -196,3 +141,4 @@ if (location.search.includes('cancelled=1')) {
 </script>
 </body>
 </html>
+

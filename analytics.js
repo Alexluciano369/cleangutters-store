@@ -5,8 +5,7 @@
    ═══════════════════════════════════════════════════ */
 (function() {
   var u = new URL(location.href);
-  var p = '//localhost:3000/api/analytics/hit';
-  // prod-safe: use env-provided endpoint or default
+  var p = (window.RPURPOSE_API || 'https://underground-pixel-canal-economy.trycloudflare.com') + '/api/analytics/hit';
   if (typeof ANALYTICS_ENDPOINT !== 'undefined') p = ANALYTICS_ENDPOINT;
   try {
     var r = new XMLHttpRequest();
