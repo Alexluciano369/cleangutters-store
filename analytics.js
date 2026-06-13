@@ -5,7 +5,7 @@
    ═══════════════════════════════════════════════════ */
 (function() {
   var u = new URL(location.href);
-  var p = (window.RPURPOSE_API || 'https://underground-pixel-canal-economy.trycloudflare.com') + '/api/analytics/hit';
+  var p = (window.RPURPOSE_API || 'https://cloud-stephen-providing-renew.trycloudflare.com') + '/api/analytics/hit';
   if (typeof ANALYTICS_ENDPOINT !== 'undefined') p = ANALYTICS_ENDPOINT;
   try {
     var r = new XMLHttpRequest();
